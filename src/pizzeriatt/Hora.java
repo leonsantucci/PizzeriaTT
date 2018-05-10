@@ -10,17 +10,22 @@ package pizzeriatt;
  * @author ITUOM
  */
 public class Hora {
-    
+
     int hora = 0;
     int minutos = 0;
 
-    public Hora(int hora, int minutos ) {
+    public Hora(int hora, int minuto) {
+
+        if (hora < 0 || hora > 23) {
+            throw new Error("Hora incorrecta");
+        }
+
+        if (minuto < 0 || minuto > 59) {
+            throw new Error("Minuto incorrecto");
+        }
+
         this.hora = hora;
-        this.minutos = minutos;
+        this.minutos = minuto;
     }
 
-    
-    
-    
-    
 }
