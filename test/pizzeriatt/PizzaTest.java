@@ -9,6 +9,9 @@ import java.util.function.UnaryOperator;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import org.junit.Before;
+import pizzeriatt.Pizza;
+import pizzeriatt.Tipo;
+import pizzeriatt.Variedad;
 import sun.security.provider.VerificationProvider;
 
 /**
