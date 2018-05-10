@@ -40,8 +40,8 @@ public class PedidoTest {
         }
         
      @Test (expected = Error.class)
-        public void deberiaDarErrorAlIngresarUnNombreNull(){
-            Pedido unPedido = new Pedido("jose",
+        public void deberiaDarErrorAlNoIngresarUnNombre(){
+            Pedido unPedido = new Pedido("",
                 new Hora(14, 20),
                 new Hora(14, 50),
                 unaPizza,

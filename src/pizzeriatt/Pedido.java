@@ -12,7 +12,7 @@ public class Pedido{
 
     public Pedido(String cliente, Hora horaPedido, Hora tiempoDemoraMinutos, Pizza unaPizza, int cantidad) {
 
-        if (cliente.isEmpty() || cliente == null) {
+        if (cliente.isEmpty()) {
             throw new Error("ingrese el cliente");
         }
         if (cantidad < 1) {
