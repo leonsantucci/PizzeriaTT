@@ -23,21 +23,21 @@ public class PizzaTest {
     @Test
     public void deberiaValer200LaMuzarellaDe8PorcionesAlaParilla() {
         Pizza unaPizza = new Pizza(8, Tipo.PARRILLA, new Variedad("mozarella", 70));
-        double valorPizza = unaPizza.getPrecio();
+        double valorPizza = unaPizza.getPrecioPedido();
         assertEquals(200, valorPizza, 0.001);
     }
 
     @Test
     public void deberiaValer245LaPizzaDeMuzarellaDe12PorcionesAElMolde() {
         Pizza unaPizza = new Pizza(12, Tipo.MOLDE, new Variedad("4 Quesos", 70));
-        double valorPizza = unaPizza.getPrecio();
+        double valorPizza = unaPizza.getPrecioPedido();
         assertEquals(245, valorPizza, 0.001);
     }
 
     @Test
     public void deberiaValer250LaPizzaDe4QuesosDe12PorcionesAElMolde() {
         Pizza unaPizza = new Pizza(12, Tipo.MOLDE, new Variedad("4 Quesos", 75));
-        double valorPizza = unaPizza.getPrecio();
+        double valorPizza = unaPizza.getPrecioPedido();
         assertEquals(250, valorPizza, 0.001);
     }
 

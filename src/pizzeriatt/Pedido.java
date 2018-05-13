@@ -31,11 +31,17 @@ public class Pedido{
     }
 
     public double getPrecio() {
-        return unaPizza.getPrecio() * this.cantidad;
+        return unaPizza.getPrecioPedido();
     }
 
     public int getNumeroPedido() {
         return numeroPedido;
     }
+
+    public int getCantidad() {
+        return cantidad;
+    }
+    
+    
 
 }

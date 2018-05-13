@@ -25,7 +25,7 @@ public class Pizza {
         this.tipo = tipo;
     }
 
-    public double getPrecio (){
+    public double getPrecioPedido (){
         return obtenerPrecioTamanio() +
                 obtenerPrecioVariedad()
                 + precioTipo();
