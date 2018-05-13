@@ -44,7 +44,7 @@ public class PedidoTest {
     public void deberiaDarErrorAlNoIngresarUnNombre() {
         Pedido unPedido = new Pedido("",
                 new Hora(14, 20),
-                ,
+                30,
                 unaPizza,
                 0);
     }
