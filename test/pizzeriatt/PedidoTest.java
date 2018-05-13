@@ -55,5 +55,12 @@ public class PedidoTest {
         double precio = unPedido.getPrecio();
         assertEquals(600, precio, 0.001);
     }
+    
+    @Test
+    public void deberiaDar880AlComprar3DeFugazetaDe10PorcionesAlMolde() {
+        Pedido unPedido = new Pedido("juan", new Hora(17, 20), 30, new Pizza(10, Tipo.MOLDE, new Variedad("fugazeta", 60)), 4);
+        double precio = unPedido.getPrecio();
+        assertEquals(880, precio, 0.001);
+    }
 
 }
