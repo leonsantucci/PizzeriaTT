@@ -4,13 +4,13 @@ public class Pedido{
 
     private String cliente;
     private Hora horaPedido;
-    private Hora tiempoDemora;
+    private int tiempoDemora;
     private int numeroPedido;
     private double precio;
     private int cantidad;
     private Pizza unaPizza;
 
-    public Pedido(String cliente, Hora horaPedido, Hora tiempoDemoraMinutos, Pizza unaPizza, int cantidad) {
+    public Pedido(String cliente, Hora horaPedido, int tiempoDemoraMinutos, Pizza unaPizza, int cantidad) {
 
         if (cliente.isEmpty()) {
             throw new Error("ingrese el cliente");
@@ -31,7 +31,7 @@ public class Pedido{
     }
 
     public double getPrecio() {
-        return unaPizza.getPrecio();
+        return unaPizza.getPrecio() * this.cantidad;
     }
 
     public int getNumeroPedido() {
