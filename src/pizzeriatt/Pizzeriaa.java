@@ -352,6 +352,7 @@ public class Pizzeriaa extends javax.swing.JFrame {
             jLabel8.setText("La cantidad debe ser un numero");
         }
         
+        
     }//GEN-LAST:event_CalcularCosto
 
     private void PresiototalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PresiototalActionPerformed

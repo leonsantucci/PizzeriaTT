@@ -41,14 +41,19 @@
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="jLabelTextoHoraPedido" min="-2" pref="77" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Component id="jLabelHoraPedido" max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
                       <Component id="jLabelTextoCostoTotal" min="-2" pref="77" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                       <Component id="jLabelCostoTotal" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="jLabelTextoHoraPedido1" min="-2" pref="77" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
+                      <Component id="jLabelHoraPedido" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="jLabelTextoHoraPedido" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="jLabelHoraPedido1" max="32767" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
@@ -64,14 +69,19 @@
                   <Component id="jLabelTextoNombreCliente" alignment="1" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabelNombreCliente" alignment="1" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace type="separate" max="32767" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabelTextoHoraPedido" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabelTextoHoraPedido1" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabelHoraPedido" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace type="separate" max="32767" attributes="0"/>
+              <EmptySpace type="unrelated" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabelTextoHoraPedido" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabelHoraPedido1" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="12" max="32767" attributes="0"/>
               <Component id="jLabelTextoPedido" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="121" max="32767" attributes="0"/>
+              <EmptySpace pref="109" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabelTextoCostoTotal" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabelCostoTotal" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -98,7 +108,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelTextoHoraPedido">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Hora Pedido:"/>
+        <Property name="text" type="java.lang.String" value="Demora (Minutos) "/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelTextoPedido">
@@ -131,6 +141,17 @@
       <Properties>
         <Property name="horizontalAlignment" type="int" value="4"/>
         <Property name="text" type="java.lang.String" value="Costo total del pedido"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabelTextoHoraPedido1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Hora Pedido:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabelHoraPedido1">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="4"/>
+        <Property name="text" type="java.lang.String" value="demora"/>
       </Properties>
     </Component>
   </SubComponents>
