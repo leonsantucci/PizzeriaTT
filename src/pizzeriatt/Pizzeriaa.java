@@ -31,19 +31,19 @@ public class Pizzeriaa extends javax.swing.JFrame {
         buttonGroup2 = new javax.swing.ButtonGroup();
         buttonGroup3 = new javax.swing.ButtonGroup();
         jLabel14 = new javax.swing.JLabel();
-        Cliente = new javax.swing.JTextField();
-        hora = new javax.swing.JTextField();
-        demora = new javax.swing.JTextField();
-        ejecutar = new javax.swing.JButton();
+        VariableCliente = new javax.swing.JTextField();
+        variableHora = new javax.swing.JTextField();
+        variableDemora = new javax.swing.JTextField();
+        VariableEjecutar = new javax.swing.JButton();
         TextCliente = new javax.swing.JLabel();
         textDemora = new javax.swing.JLabel();
         TextHora = new javax.swing.JLabel();
-        Presiototal = new javax.swing.JTextField();
+        variablePresiototal = new javax.swing.JTextField();
         ImagenYtextVariedad = new javax.swing.JLabel();
         ImagenYTextorciones = new javax.swing.JLabel();
         ImagenYTextTipoDePizza = new javax.swing.JLabel();
-        CantidadPizzaIngresadas = new javax.swing.JTextField();
-        Minuto = new javax.swing.JTextField();
+        VariableCantidadPizzaIngresadas = new javax.swing.JTextField();
+        VariableMinuto = new javax.swing.JTextField();
         Puntos = new javax.swing.JLabel();
         VariedadPizza = new javax.swing.JComboBox<>();
         VariedadPorciones = new javax.swing.JComboBox<>();
@@ -55,35 +55,35 @@ public class Pizzeriaa extends javax.swing.JFrame {
         Flechita2 = new javax.swing.JLabel();
         Flechita = new javax.swing.JLabel();
         TextObservacion = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
-        variableCliente = new javax.swing.JLabel();
-        variablehora = new javax.swing.JLabel();
+        variableObservacion = new javax.swing.JTextField();
+        variableEroorCliente = new javax.swing.JLabel();
+        variableErrorhora = new javax.swing.JLabel();
 
         jLabel14.setText("              ");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        Cliente.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        Cliente.setText(" ");
-        Cliente.addActionListener(new java.awt.event.ActionListener() {
+        VariableCliente.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        VariableCliente.setText(" ");
+        VariableCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ClienteActionPerformed(evt);
+                VariableClienteActionPerformed(evt);
             }
         });
 
-        hora.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        hora.setText("00");
-        hora.addActionListener(new java.awt.event.ActionListener() {
+        variableHora.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        variableHora.setText("00");
+        variableHora.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                horaActionPerformed(evt);
+                variableHoraActionPerformed(evt);
             }
         });
 
-        demora.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        demora.setHorizontalAlignment(javax.swing.JTextField.TRAILING);
+        variableDemora.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        variableDemora.setHorizontalAlignment(javax.swing.JTextField.TRAILING);
 
-        ejecutar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pizzeriatt/imagenes/6798618-pizza-en-el-oro-de-internet-de-botón-ilustración-original.jpg"))); // NOI18N
-        ejecutar.addActionListener(new java.awt.event.ActionListener() {
+        VariableEjecutar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pizzeriatt/imagenes/6798618-pizza-en-el-oro-de-internet-de-botón-ilustración-original.jpg"))); // NOI18N
+        VariableEjecutar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CalcularCosto(evt);
             }
@@ -101,9 +101,9 @@ public class Pizzeriaa extends javax.swing.JFrame {
         TextHora.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pizzeriatt/imagenes/reloj.png"))); // NOI18N
         TextHora.setText("hora");
 
-        Presiototal.addActionListener(new java.awt.event.ActionListener() {
+        variablePresiototal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PresiototalActionPerformed(evt);
+                variablePresiototalActionPerformed(evt);
             }
         });
 
@@ -119,8 +119,8 @@ public class Pizzeriaa extends javax.swing.JFrame {
         ImagenYTextTipoDePizza.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pizzeriatt/imagenes/piedra.jpg"))); // NOI18N
         ImagenYTextTipoDePizza.setText("Tipo de pizza ");
 
-        Minuto.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        Minuto.setText("00");
+        VariableMinuto.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        VariableMinuto.setText("00");
 
         Puntos.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         Puntos.setText(":");
@@ -153,28 +153,20 @@ public class Pizzeriaa extends javax.swing.JFrame {
         TextObservacion.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         TextObservacion.setText("Observacion");
 
-        jTextField5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jTextField5.setForeground(new java.awt.Color(153, 0, 0));
-        jTextField5.setText("                                       ");
+        variableObservacion.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        variableObservacion.setForeground(new java.awt.Color(153, 0, 0));
+        variableObservacion.setText("                                       ");
 
-        variableCliente.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        variableCliente.setForeground(new java.awt.Color(153, 0, 0));
+        variableEroorCliente.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        variableEroorCliente.setForeground(new java.awt.Color(153, 0, 0));
 
-        variablehora.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        variablehora.setForeground(new java.awt.Color(153, 0, 0));
+        variableErrorhora.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        variableErrorhora.setForeground(new java.awt.Color(153, 0, 0));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(506, 506, 506)
-                .addComponent(Presiototal, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(Flecha)
-                .addGap(39, 39, 39)
-                .addComponent(ejecutar)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
@@ -190,34 +182,25 @@ public class Pizzeriaa extends javax.swing.JFrame {
                                 .addGap(139, 139, 139)))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(demora, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(variableDemora, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(23, 23, 23))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(hora, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(variableHora, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(18, 18, 18)
                                         .addComponent(Puntos)
-                                        .addGap(12, 12, 12)
-                                        .addComponent(Minuto, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(Cliente, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(VariableMinuto, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(VariableCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(Flechita)
                             .addComponent(Flechita2))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(variableCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(variablehora, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                        .addGap(51, 51, 51)
-                        .addComponent(VariedadPizza, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(195, 195, 195)
-                        .addComponent(VariedadPorciones, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(230, 230, 230)
-                        .addComponent(VariedadTipoDePizza, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(99, 99, 99)
-                        .addComponent(variableErrorDeIngresCantidadDePizza, javax.swing.GroupLayout.PREFERRED_SIZE, 264, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(variableEroorCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(variableErrorhora, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                         .addGap(42, 42, 42)
                         .addComponent(ImagenYtextVariedad)
@@ -226,9 +209,7 @@ public class Pizzeriaa extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(630, 630, 630)
-                                .addComponent(TextObservacion)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(TextObservacion))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(123, 123, 123)
                                 .addComponent(ImagenYTextTipoDePizza, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -237,11 +218,35 @@ public class Pizzeriaa extends javax.swing.JFrame {
                                     .addComponent(TextCantidadDePizza)
                                     .addGroup(layout.createSequentialGroup()
                                         .addGap(10, 10, 10)
-                                        .addComponent(CantidadPizzaIngresadas, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                                        .addComponent(VariableCantidadPizzaIngresadas, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                        .addGap(18, 18, 18)
+                        .addComponent(variableObservacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                        .addGap(530, 530, 530)
-                        .addComponent(VariableTextPresioTotal)))
-                .addContainerGap(163, Short.MAX_VALUE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(51, 51, 51)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(variablePresiototal, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(VariedadPizza, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(195, 195, 195)
+                                        .addComponent(VariedadPorciones, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(230, 230, 230)
+                                        .addComponent(VariedadTipoDePizza, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(VariableTextPresioTotal)
+                                .addGap(24, 24, 24)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(99, 99, 99)
+                                .addComponent(variableErrorDeIngresCantidadDePizza, javax.swing.GroupLayout.PREFERRED_SIZE, 264, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(121, 121, 121)
+                                .addComponent(Flecha)
+                                .addGap(39, 39, 39)
+                                .addComponent(VariableEjecutar)))))
+                .addContainerGap(155, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -258,33 +263,34 @@ public class Pizzeriaa extends javax.swing.JFrame {
                         .addGap(29, 29, 29)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(variableCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(variableEroorCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(variablehora, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(Cliente, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(50, 50, 50)
-                                        .addComponent(hora, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(47, 47, 47)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                            .addComponent(Minuto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(Puntos)
-                                            .addComponent(Flechita))))))))
+                                .addComponent(variableErrorhora, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(VariableMinuto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(VariableCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addGap(50, 50, 50)
+                                            .addComponent(variableHora, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addGap(54, 54, 54)
+                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                                .addComponent(Puntos)
+                                                .addComponent(Flechita)))))))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(textDemora)
-                    .addComponent(demora, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(variableDemora, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(70, 70, 70)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(TextCantidadDePizza)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(CantidadPizzaIngresadas, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(VariableCantidadPizzaIngresadas, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(variableObservacion, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(TextObservacion, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(ImagenYTextTipoDePizza, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -298,14 +304,15 @@ public class Pizzeriaa extends javax.swing.JFrame {
                                 .addComponent(VariedadPorciones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(VariedadPizza, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(VariedadTipoDePizza, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(120, 120, 120)
-                        .addComponent(VariableTextPresioTotal)
-                        .addGap(10, 10, 10)
+                        .addGap(149, 149, 149)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(Presiototal, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(Flecha))
-                            .addComponent(ejecutar)))
+                            .addComponent(VariableEjecutar)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(VariableTextPresioTotal)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(variablePresiototal, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(Flecha)))))
                     .addComponent(variableErrorDeIngresCantidadDePizza, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(28, 28, 28))
         );
@@ -313,13 +320,13 @@ public class Pizzeriaa extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void ClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ClienteActionPerformed
+    private void VariableClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VariableClienteActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_ClienteActionPerformed
+    }//GEN-LAST:event_VariableClienteActionPerformed
 
-    private void horaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_horaActionPerformed
+    private void variableHoraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_variableHoraActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_horaActionPerformed
+    }//GEN-LAST:event_variableHoraActionPerformed
 
     private void CalcularCosto(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CalcularCosto
         Variedad variedad = null;
@@ -354,9 +361,9 @@ public class Pizzeriaa extends javax.swing.JFrame {
         }
         Pizza pizzaSeleccionada = new Pizza(tamanio, tipo, variedad);
         try {
-            int cantidad = Integer.valueOf(CantidadPizzaIngresadas.getText());
+            int cantidad = Integer.valueOf(VariableCantidadPizzaIngresadas.getText());
             double precioFinal = pizzaSeleccionada.getPrecioPedido() * cantidad;
-            Presiototal.setText(String.valueOf(precioFinal));
+            variablePresiototal.setText(String.valueOf(precioFinal));
         } catch (Exception e) {
             variableErrorDeIngresCantidadDePizza.setText("La cantidad debe ser un numero");
         }
@@ -364,9 +371,9 @@ public class Pizzeriaa extends javax.swing.JFrame {
         
     }//GEN-LAST:event_CalcularCosto
 
-    private void PresiototalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PresiototalActionPerformed
+    private void variablePresiototalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_variablePresiototalActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_PresiototalActionPerformed
+    }//GEN-LAST:event_variablePresiototalActionPerformed
 
     /**
      * @param args the command line arguments
@@ -404,21 +411,21 @@ public class Pizzeriaa extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField CantidadPizzaIngresadas;
-    private javax.swing.JTextField Cliente;
     private javax.swing.JLabel Flecha;
     private javax.swing.JLabel Flechita;
     private javax.swing.JLabel Flechita2;
     private javax.swing.JLabel ImagenYTextTipoDePizza;
     private javax.swing.JLabel ImagenYTextorciones;
     private javax.swing.JLabel ImagenYtextVariedad;
-    private javax.swing.JTextField Minuto;
-    private javax.swing.JTextField Presiototal;
     private javax.swing.JLabel Puntos;
     private javax.swing.JLabel TextCantidadDePizza;
     private javax.swing.JLabel TextCliente;
     private javax.swing.JLabel TextHora;
     private javax.swing.JLabel TextObservacion;
+    private javax.swing.JTextField VariableCantidadPizzaIngresadas;
+    private javax.swing.JTextField VariableCliente;
+    private javax.swing.JButton VariableEjecutar;
+    private javax.swing.JTextField VariableMinuto;
     private javax.swing.JLabel VariableTextPresioTotal;
     private javax.swing.JComboBox<String> VariedadPizza;
     private javax.swing.JComboBox<String> VariedadPorciones;
@@ -426,14 +433,14 @@ public class Pizzeriaa extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.ButtonGroup buttonGroup3;
-    private javax.swing.JTextField demora;
-    private javax.swing.JButton ejecutar;
-    private javax.swing.JTextField hora;
     private javax.swing.JLabel jLabel14;
-    private javax.swing.JTextField jTextField5;
     private javax.swing.JLabel textDemora;
-    private javax.swing.JLabel variableCliente;
+    private javax.swing.JTextField variableDemora;
+    private javax.swing.JLabel variableEroorCliente;
     private javax.swing.JLabel variableErrorDeIngresCantidadDePizza;
-    private javax.swing.JLabel variablehora;
+    private javax.swing.JLabel variableErrorhora;
+    private javax.swing.JTextField variableHora;
+    private javax.swing.JTextField variableObservacion;
+    private javax.swing.JTextField variablePresiototal;
     // End of variables declaration//GEN-END:variables
 }
