@@ -35,6 +35,8 @@ public class GuiPantallaTiket extends javax.swing.JFrame {
         jLabelHoraPedido = new javax.swing.JLabel();
         jLabelTextoCostoTotal = new javax.swing.JLabel();
         jLabelCostoTotal = new javax.swing.JLabel();
+        jLabelTextoHoraPedido1 = new javax.swing.JLabel();
+        jLabelHoraPedido1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -45,7 +47,7 @@ public class GuiPantallaTiket extends javax.swing.JFrame {
 
         jLabelTextoNombreCliente.setText("Nombre Cliente:");
 
-        jLabelTextoHoraPedido.setText("Hora Pedido:");
+        jLabelTextoHoraPedido.setText("Demora (Minutos) ");
 
         jLabelTextoPedido.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabelTextoPedido.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -61,6 +63,11 @@ public class GuiPantallaTiket extends javax.swing.JFrame {
 
         jLabelCostoTotal.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabelCostoTotal.setText("Costo total del pedido");
+
+        jLabelTextoHoraPedido1.setText("Hora Pedido:");
+
+        jLabelHoraPedido1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabelHoraPedido1.setText("demora");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -79,13 +86,17 @@ public class GuiPantallaTiket extends javax.swing.JFrame {
                         .addComponent(jLabelLabelTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabelTextoHoraPedido, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabelHoraPedido, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabelTextoCostoTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabelCostoTotal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(jLabelCostoTotal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabelTextoHoraPedido1, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(57, 57, 57)
+                        .addComponent(jLabelHoraPedido, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabelTextoHoraPedido)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabelHoraPedido1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -96,13 +107,17 @@ public class GuiPantallaTiket extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabelTextoNombreCliente, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabelNombreCliente, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addGap(18, 18, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelTextoHoraPedido1)
+                    .addComponent(jLabelHoraPedido))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelTextoHoraPedido)
-                    .addComponent(jLabelHoraPedido))
-                .addGap(18, 18, Short.MAX_VALUE)
+                    .addComponent(jLabelHoraPedido1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
                 .addComponent(jLabelTextoPedido)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 121, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 109, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelTextoCostoTotal)
                     .addComponent(jLabelCostoTotal))
@@ -151,10 +166,12 @@ public class GuiPantallaTiket extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabelCostoTotal;
     private javax.swing.JLabel jLabelHoraPedido;
+    private javax.swing.JLabel jLabelHoraPedido1;
     private javax.swing.JLabel jLabelLabelTitulo;
     private javax.swing.JLabel jLabelNombreCliente;
     private javax.swing.JLabel jLabelTextoCostoTotal;
     private javax.swing.JLabel jLabelTextoHoraPedido;
+    private javax.swing.JLabel jLabelTextoHoraPedido1;
     private javax.swing.JLabel jLabelTextoNombreCliente;
     private javax.swing.JLabel jLabelTextoPedido;
     // End of variables declaration//GEN-END:variables
