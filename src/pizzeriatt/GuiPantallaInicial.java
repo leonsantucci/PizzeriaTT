@@ -40,7 +40,7 @@ public class GuiPantallaInicial extends javax.swing.JFrame {
         botonDePedido.setText("CREAR PEDIDO");
         botonDePedido.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonDePedidoActionPerformed(evt);
+                generarPedido(evt);
             }
         });
 
@@ -103,9 +103,10 @@ public class GuiPantallaInicial extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void botonDePedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonDePedidoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_botonDePedidoActionPerformed
+    private void generarPedido(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_generarPedido
+        GuiPantallaPedido unPedido = new GuiPantallaPedido();
+        unPedido.setVisible(true);
+    }//GEN-LAST:event_generarPedido
 
     /**
      * @param args the command line arguments
