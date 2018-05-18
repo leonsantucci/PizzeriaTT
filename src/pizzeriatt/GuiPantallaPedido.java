@@ -359,8 +359,10 @@ public class GuiPantallaPedido extends javax.swing.JFrame {
         Pizza pizzaSeleccionada = new Pizza(tamanio, tipo, variedad);
         try {
             int cantidad = Integer.valueOf(VariableCantidadPizzaIngresadas.getText());
-            double precioFinal = pizzaSeleccionada.getPrecioPedido() * cantidad;
-            variablePresiototal.setText(String.valueOf(precioFinal));
+            
+            Pedido pedidoRealizado = new Pedido("Cliente", "15:20", 10, pizzaSeleccionada, cantidad);
+ 
+            variablePresiototal.setText(String.valueOf(pedidoRealizado.getPrecio()));
             
             String nombreIngresado = VariableCliente.getText();
             nombreIngresado = nombreIngresado.trim();
@@ -374,6 +376,7 @@ public class GuiPantallaPedido extends javax.swing.JFrame {
                 ticket.jLabelCostoTotal.setText(variablePresiototal.getText());
                 ticket.jLabelObservacion.setText(variableObservacion.getText());
                 ticket.setVisible(true);
+                dispose();
             }
     
             

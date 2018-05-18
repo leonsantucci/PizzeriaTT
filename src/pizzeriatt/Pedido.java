@@ -1,16 +1,19 @@
 package pizzeriatt;
 
-public class Pedido{
+import java.util.Calendar;
+import java.util.Date;
+
+public class Pedido {
 
     private String cliente;
-    private Hora horaPedido;
+    private String horaPedido;
     private int tiempoDemora;
     private int numeroPedido;
     private double precio;
     private int cantidad;
     private Pizza unaPizza;
 
-    public Pedido(String cliente, Hora horaPedido, int tiempoDemoraMinutos, Pizza unaPizza, int cantidad) {
+    public Pedido(String cliente, String horaPedido, int tiempoDemoraMinutos, Pizza unaPizza, int cantidad) {
 
         if (cliente.isEmpty()) {
             throw new Error("ingrese el cliente");
@@ -18,8 +21,8 @@ public class Pedido{
         if (cantidad < 1) {
             throw new Error("cantidad");
         }
-        
-        if (unaPizza == null){
+
+        if (unaPizza == null) {
             throw new Error("ingrese la una pizza");
         }
         this.cliente = cliente;
@@ -31,7 +34,7 @@ public class Pedido{
     }
 
     public double getPrecio() {
-        return unaPizza.getPrecioPedido();
+        return unaPizza.getPrecioPedido() * cantidad;
     }
 
     public int getNumeroPedido() {
@@ -41,7 +44,23 @@ public class Pedido{
     public int getCantidad() {
         return cantidad;
     }
-    
-    
+
+    public boolean estaAtrasado(Date fechaActual) {
+
+        String[] partes = this.horaPedido.split(":");
+        int horas = Integer.valueOf(partes[0]);
+        int minutos = Integer.valueOf(partes[1]);
+
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(Calendar.HOUR_OF_DAY, horas);
+        calendar.set(Calendar.MINUTE, minutos);
+
+        calendar.add(Calendar.MINUTE, tiempoDemora);
+
+        Date fechaEstimadaEntrega = calendar.getTime();
+
+        return fechaEstimadaEntrega.before(fechaActual);
+
+    }
 
 }

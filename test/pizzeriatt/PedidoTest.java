@@ -5,6 +5,7 @@
  */
 package pizzeriatt;
 
+import java.util.Date;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import org.junit.Before;
@@ -25,7 +26,7 @@ public class PedidoTest {
     @Test(expected = Error.class)
     public void deberiaDarErrorAlIngresarCantidadMenorA1() {
         Pedido unPedido = new Pedido("jose",
-                new Hora(14, 20),
+                "14:30",
                 30,
                 new Pizza(8, Tipo.MOLDE, new Variedad("mozarella", 70)),
                 0);
@@ -34,7 +35,7 @@ public class PedidoTest {
     @Test(expected = Error.class)
     public void deberiaDarErrorAlIngresarUnaPizzaNull() {
         Pedido unPedido = new Pedido("jose",
-                new Hora(14, 20),
+                "10:20",
                 30,
                 null,
                 0);
@@ -43,7 +44,7 @@ public class PedidoTest {
     @Test(expected = Error.class)
     public void deberiaDarErrorAlNoIngresarUnNombre() {
         Pedido unPedido = new Pedido("",
-                new Hora(14, 20),
+                "10:50",
                 30,
                 unaPizza,
                 0);
@@ -51,16 +52,28 @@ public class PedidoTest {
 
     @Test
     public void deberiaDar600AlComprar3DeMuzzarella() {
-        Pedido unPedido = new Pedido("juan", new Hora(13, 20), 30, new Pizza(8, Tipo.PARRILLA, new Variedad("mozarella", 70)), 3);
+        Pedido unPedido = new Pedido("juan", "13:20", 30, new Pizza(8, Tipo.PARRILLA, new Variedad("mozarella", 70)), 3);
         double precio = unPedido.getPrecio();
         assertEquals(600, precio, 0.001);
     }
     
     @Test
     public void deberiaDar880AlComprar3DeFugazetaDe10PorcionesAlMolde() {
-        Pedido unPedido = new Pedido("juan", new Hora(17, 20), 30, new Pizza(10, Tipo.MOLDE, new Variedad("fugazeta", 60)), 4);
+        Pedido unPedido = new Pedido("juan", "15:50", 30, new Pizza(10, Tipo.MOLDE, new Variedad("fugazeta", 60)), 4);
         double precio = unPedido.getPrecio();
         assertEquals(880, precio, 0.001);
+    }
+    
+    @Test
+    public void elPedidoDeberiaEstarAtrasado() {
+        
+        Pedido unPedido = new Pedido("juan", "16:00", 20, new Pizza(8, Tipo.PARRILLA, new Variedad("mozarella", 70)), 3);
+        
+        boolean estaAtrasado = unPedido.estaAtrasado(new Date());
+        
+        assertTrue(estaAtrasado);
+        
+
     }
 
 }
