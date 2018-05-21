@@ -5,8 +5,11 @@
  */
 package pizzeriatt;
 
+import java.awt.Color;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+import java.util.TimerTask;
 
 /**
  *
@@ -14,9 +17,10 @@ import java.util.List;
  */
 public class GuiPantallaInicial extends javax.swing.JFrame {
 
-    private List<Pedido> pedidos=new ArrayList<>();
+    private List<Pedido> pedidos = new ArrayList<>();
     public GuiPantallaInicial() {
         initComponents();
+        iniciarTimer();
     }
 
     /**
@@ -251,6 +255,30 @@ public class GuiPantallaInicial extends javax.swing.JFrame {
         unPedido.setVisible(true);
     }//GEN-LAST:event_generarPedido
 
+    private void iniciarTimer (){
+        TimerTask task = new TimerTask() {
+            @Override
+            public void run() {
+              
+                for (int i = 0; i < pedidos.size(); i++){
+                    Pedido pedidoActual = pedidos.get(i);
+                    if (pedidoActual.estaAtrasado(new Date())){
+                        if (i == 0) {
+                            Tiempodemora1.setForeground(Color.red);
+                        } else if (i == 1){
+                            Tiempodemora2.setForeground(Color.red);
+                        } else if (i == 2){
+                            Tiempodemora3.setForeground(Color.red);
+                        } else if (i == 3){
+                            Tiempodemora4.setForeground(Color.red);
+                        } else if (i == 4){
+                            Tiempodemora5.setForeground(Color.red);
+                        }
+                    }
+                }
+            }
+        }
+    }
     /**
      * @param args the command line arguments
      */
