@@ -74,6 +74,14 @@ public class Pedido {
     public String getCliente() {
         return cliente;
     }
+
+    public String getHoraPedido() {
+        return horaPedido;
+    }
+
+    public void setHoraPedido(String horaPedido) {
+        this.horaPedido = horaPedido;
+    }
     
     
     
