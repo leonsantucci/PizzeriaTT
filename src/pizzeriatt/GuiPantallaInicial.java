@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.TimerTask;
+import java.util.Timer;
 
 /**
  *
@@ -252,7 +253,9 @@ public class GuiPantallaInicial extends javax.swing.JFrame {
 
     private void generarPedido(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_generarPedido
         GuiPantallaPedido unPedido = new GuiPantallaPedido();
+        unPedido.setPantallaListado(this);
         unPedido.setVisible(true);
+        
     }//GEN-LAST:event_generarPedido
 
     private void iniciarTimer (){
@@ -277,7 +280,11 @@ public class GuiPantallaInicial extends javax.swing.JFrame {
                     }
                 }
             }
-        }
+        };
+        
+        Timer timer = new Timer();
+        timer.schedule(task, 0, 10000);
+        
     }
     /**
      * @param args the command line arguments
@@ -341,4 +348,25 @@ public class GuiPantallaInicial extends javax.swing.JFrame {
     private javax.swing.JLabel textohorapedido;
     private javax.swing.JLabel textotiempodemora;
     // End of variables declaration//GEN-END:variables
+
+    public void agregarPedido(Pedido pedidoRealizado) {
+        
+        this.pedidos.add(pedidoRealizado);
+        
+        int posicion = this.pedidos.size();
+        
+        if(posicion == 1) {
+            Cliente1.setText(pedidoRealizado.getCliente());    
+        } else if (posicion == 2) {
+            Cliente2.setText(pedidoRealizado.getCliente());    
+        } else if (posicion == 3) {
+            Cliente3.setText(pedidoRealizado.getCliente());    
+        } else if (posicion == 4) {
+            Cliente4.setText(pedidoRealizado.getCliente());    
+        } else if (posicion == 5) {
+            Cliente5.setText(pedidoRealizado.getCliente());    
+        }
+        
+        
+    }
 }

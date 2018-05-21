@@ -12,6 +12,8 @@ import pizzeriatt.Variedad;
  */
 public class GuiPantallaPedido extends javax.swing.JFrame {
 
+    private GuiPantallaInicial pantallaInicial;
+
     /**
      * Creates new form Pizzeriaa
      */
@@ -363,6 +365,10 @@ public class GuiPantallaPedido extends javax.swing.JFrame {
                 ticket.jLabelHoraDemora.setText(variableDemora.getText());
                 ticket.jLabelCostoTotal.setText(variablePresiototal.getText());
                 ticket.jLabelObservacion.setText(variableObservacion.getText());
+                
+                pedidoRealizado.setCliente(nombreIngresado);
+                pantallaInicial.agregarPedido(pedidoRealizado);
+                
                 ticket.setVisible(true);
                 dispose();
             }
@@ -453,4 +459,8 @@ public class GuiPantallaPedido extends javax.swing.JFrame {
     private javax.swing.JTextField variableObservacion;
     private javax.swing.JTextField variablePresiototal;
     // End of variables declaration//GEN-END:variables
+
+    public void setPantallaListado(GuiPantallaInicial pantallaInicial) {
+        this.pantallaInicial = pantallaInicial;
+    }
 }

@@ -66,6 +66,17 @@ public class Pedido {
     public void setTiempoDemora(int tiempoDemora) {
         this.tiempoDemora = tiempoDemora;
     }
+
+    public void setCliente(String cliente) {
+        this.cliente = cliente;
+    }
+
+    public String getCliente() {
+        return cliente;
+    }
+    
+    
+    
     
     
 
