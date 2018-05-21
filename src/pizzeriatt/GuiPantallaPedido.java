@@ -173,10 +173,11 @@ public class GuiPantallaPedido extends javax.swing.JFrame {
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(VariableCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(layout.createSequentialGroup()
+                                        .addGap(22, 22, 22)
                                         .addComponent(variableHora, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(26, 26, 26)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(Puntos)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(VariableMinuto, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(layout.createSequentialGroup()
                                         .addGap(15, 15, 15)
@@ -360,7 +361,7 @@ public class GuiPantallaPedido extends javax.swing.JFrame {
         try {
             int cantidad = Integer.valueOf(VariableCantidadPizzaIngresadas.getText());
             Integer demora = Integer.valueOf(variableDemora.getText());
-            Pedido pedidoRealizado = new Pedido(VariableCliente.getText(), variableHora.getText(), demora, new Pizza(tamanio, tipo, variedad), cantidad);
+            Pedido pedidoRealizado = new Pedido(VariableCliente.getText(), variableHora.getText(), demora, pizzaSeleccionada, cantidad);
  
             variablePresiototal.setText(String.valueOf(pedidoRealizado.getPrecio()));
             

@@ -63,4 +63,10 @@ public class Pedido {
 
     }
 
+    public void setTiempoDemora(int tiempoDemora) {
+        this.tiempoDemora = tiempoDemora;
+    }
+    
+    
+
 }
