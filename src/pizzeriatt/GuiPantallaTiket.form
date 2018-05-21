@@ -41,14 +41,14 @@
                       <Component id="jLabelNombreCliente" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace min="0" pref="6" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       <Component id="jLabelLabelTitulo" min="-2" pref="242" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="7" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <Component id="jLabelTextoCostoTotal" min="-2" pref="77" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
-                      <Component id="jLabelCostoTotal" max="32767" attributes="0"/>
+                      <Component id="jLabelCostoTotal" pref="0" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -69,7 +69,12 @@
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace pref="23" max="32767" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace pref="90" max="32767" attributes="0"/>
+              <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="90" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -99,14 +104,16 @@
                   <Component id="jLabelTextoObservacion" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabelObservacion" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="13" max="32767" attributes="0"/>
+              <EmptySpace pref="10" max="32767" attributes="0"/>
               <Component id="jLabelTextoPedido" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="129" max="32767" attributes="0"/>
+              <EmptySpace pref="126" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabelTextoCostoTotal" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabelCostoTotal" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="34" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -193,7 +200,6 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelObservacion">
       <Properties>
-        <Property name="horizontalAlignment" type="int" value="4"/>
         <Property name="text" type="java.lang.String" value="observacion"/>
       </Properties>
       <AuxValues>
@@ -213,6 +219,14 @@
       <Properties>
         <Property name="horizontalAlignment" type="int" value="0"/>
         <Property name="text" type="java.lang.String" value=":"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButton1">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="99" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Imprimir Ticket"/>
       </Properties>
     </Component>
   </SubComponents>
