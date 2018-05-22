@@ -24,83 +24,66 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                  <Component id="Cliente3" pref="90" max="32767" attributes="0"/>
+                  <Component id="Cliente2" alignment="1" pref="90" max="32767" attributes="0"/>
+                  <Component id="Cliente1" alignment="1" pref="90" max="32767" attributes="0"/>
+                  <Component id="Cliente4" alignment="1" pref="90" max="32767" attributes="0"/>
+                  <Component id="Cliente5" alignment="1" pref="90" max="32767" attributes="0"/>
+                  <Component id="textocliente" max="32767" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="Cliente3" pref="81" max="32767" attributes="0"/>
-                          <Component id="Cliente2" max="32767" attributes="0"/>
-                          <Component id="Cliente1" max="32767" attributes="0"/>
-                          <Component id="Cliente4" alignment="0" max="32767" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
-                              <Component id="Cliente5" min="-2" pref="81" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
-                          </Group>
-                          <Group type="102" attributes="0">
-                              <Component id="textocliente" min="-2" pref="78" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                  </Group>
-              </Group>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="textoPedido" alignment="0" min="-2" pref="56" max="-2" attributes="0"/>
-                          <Component id="Pedido4" alignment="1" min="-2" pref="115" max="-2" attributes="0"/>
-                          <Component id="Pedido3" alignment="1" min="-2" pref="114" max="-2" attributes="0"/>
-                          <Component id="Pedido2" alignment="1" min="-2" pref="112" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace pref="121" max="32767" attributes="0"/>
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="Horapedido1" alignment="1" max="32767" attributes="0"/>
-                          <Component id="textohorapedido" max="32767" attributes="0"/>
-                          <Component id="Horapedido2" max="32767" attributes="0"/>
-                          <Component id="Horapedido3" max="32767" attributes="0"/>
-                          <Component id="Horapedido5" max="32767" attributes="0"/>
-                          <Component id="Horapedido4" alignment="0" max="32767" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="85" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="textotiempodemora" min="-2" pref="109" max="-2" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="Tiempodemora3" alignment="0" min="-2" pref="83" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="Tiempodemora2" max="32767" attributes="0"/>
-                                      <Component id="Tiempodemora1" pref="83" max="32767" attributes="0"/>
-                                  </Group>
-                                  <Component id="Tiempodemora4" alignment="0" min="-2" pref="83" max="-2" attributes="0"/>
-                                  <Component id="Tiempodemora5" min="-2" pref="84" max="-2" attributes="0"/>
+                                  <Component id="Pedido3" max="32767" attributes="0"/>
+                                  <Component id="Pedido5" max="32767" attributes="0"/>
+                                  <Component id="Pedido4" max="32767" attributes="0"/>
                               </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Component id="textoPedido" max="32767" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="Pedido2" min="-2" pref="90" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="Horapedido5" alignment="0" max="32767" attributes="0"/>
+                          <Component id="Horapedido4" alignment="0" max="32767" attributes="0"/>
+                          <Component id="Horapedido3" alignment="0" max="32767" attributes="0"/>
+                          <Component id="Horapedido2" alignment="1" max="32767" attributes="0"/>
+                          <Component id="textohorapedido" pref="103" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="Tiempodemora2" min="-2" pref="90" max="-2" attributes="0"/>
+                          <Component id="Tiempodemora3" alignment="0" min="-2" pref="90" max="-2" attributes="0"/>
+                          <Component id="textotiempodemora" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="Tiempodemora4" min="-2" pref="90" max="-2" attributes="0"/>
+                          <Component id="Tiempodemora5" min="-2" pref="90" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
                   <Group type="102" attributes="0">
-                      <Component id="Pedido1" min="-2" pref="115" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <Component id="Pedido1" min="-2" pref="90" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="Horapedido1" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="Tiempodemora1" min="-2" pref="90" max="-2" attributes="0"/>
                   </Group>
               </Group>
+              <EmptySpace min="-2" pref="173" max="-2" attributes="0"/>
           </Group>
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace pref="514" max="32767" attributes="0"/>
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
               <Component id="botonDePedido" min="-2" pref="133" max="-2" attributes="0"/>
-              <EmptySpace min="0" pref="250" max="32767" attributes="0"/>
-          </Group>
-          <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="182" max="-2" attributes="0"/>
-                  <Component id="Pedido5" min="-2" pref="114" max="-2" attributes="0"/>
-                  <EmptySpace pref="601" max="32767" attributes="0"/>
-              </Group>
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -109,81 +92,66 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="32767" attributes="0"/>
               <Component id="botonDePedido" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="textocliente" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
-                  <Component id="textoPedido" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="textohorapedido" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                   <Component id="textotiempodemora" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                  <Component id="textoPedido" alignment="0" min="-2" pref="27" max="-2" attributes="0"/>
               </Group>
+              <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                      <Component id="Cliente1" min="-2" pref="25" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="Cliente2" max="32767" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="Cliente3" min="-2" pref="26" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="Cliente4" min="-2" pref="21" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                      <Component id="Cliente5" min="-2" pref="20" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="155" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="Horapedido1" alignment="0" min="-2" pref="20" max="-2" attributes="0"/>
+                          <Component id="Tiempodemora1" alignment="0" min="-2" pref="20" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="Tiempodemora2" min="-2" pref="20" max="-2" attributes="0"/>
+                          <Component id="Horapedido2" min="-2" pref="20" max="-2" attributes="0"/>
+                      </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="Horapedido1" min="-2" pref="16" max="-2" attributes="0"/>
-                                  <Component id="Tiempodemora5" min="-2" pref="22" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <EmptySpace min="2" pref="2" max="-2" attributes="0"/>
-                                      <Component id="Horapedido2" max="32767" attributes="0"/>
-                                  </Group>
-                                  <Component id="Tiempodemora1" min="-2" pref="19" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <Component id="Tiempodemora2" max="32767" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="Tiempodemora3" min="-2" pref="27" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="Tiempodemora4" min="-2" pref="20" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" attributes="0">
-                                      <Component id="Horapedido3" min="-2" pref="16" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="Horapedido4" min="-2" pref="20" max="-2" attributes="0"/>
-                                      <EmptySpace max="32767" attributes="0"/>
-                                      <Component id="Horapedido5" min="-2" pref="20" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                          </Group>
-                          <Group type="102" attributes="0">
-                              <Component id="Pedido1" min="-2" pref="18" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
-                              <Component id="Pedido4" min="-2" pref="31" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="Pedido2" min="-2" pref="22" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="Pedido3" min="-2" pref="24" max="-2" attributes="0"/>
-                          </Group>
+                          <Component id="Horapedido3" min="-2" pref="20" max="-2" attributes="0"/>
+                          <Component id="Tiempodemora3" min="-2" pref="20" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="200" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="Horapedido5" min="-2" pref="20" max="-2" attributes="0"/>
+                          <Component id="Tiempodemora5" min="-2" pref="20" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
-              </Group>
-          </Group>
-          <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="149" max="-2" attributes="0"/>
-                  <Component id="Pedido5" min="-2" pref="22" max="-2" attributes="0"/>
-                  <EmptySpace pref="297" max="32767" attributes="0"/>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="Cliente1" min="-2" pref="20" max="-2" attributes="0"/>
+                          <Component id="Pedido1" min="-2" pref="20" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="Cliente2" min="-2" pref="20" max="-2" attributes="0"/>
+                          <Component id="Pedido2" min="-2" pref="20" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="Cliente3" min="-2" pref="20" max="-2" attributes="0"/>
+                          <Component id="Pedido3" min="-2" pref="20" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="Pedido4" min="-2" pref="20" max="-2" attributes="0"/>
+                          <Component id="Cliente4" alignment="0" min="-2" pref="20" max="-2" attributes="0"/>
+                          <Component id="Horapedido4" alignment="0" min="-2" pref="20" max="-2" attributes="0"/>
+                          <Component id="Tiempodemora4" alignment="0" min="-2" pref="20" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="Cliente5" min="-2" pref="20" max="-2" attributes="0"/>
+                          <Component id="Pedido5" min="-2" pref="20" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="231" max="-2" attributes="0"/>
+                  </Group>
               </Group>
           </Group>
       </Group>
