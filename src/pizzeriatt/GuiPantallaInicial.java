@@ -19,6 +19,7 @@ import java.util.Timer;
 public class GuiPantallaInicial extends javax.swing.JFrame {
 
     private List<Pedido> pedidos = new ArrayList<>();
+
     public GuiPantallaInicial() {
         initComponents();
         iniciarTimer();
@@ -135,10 +136,10 @@ public class GuiPantallaInicial extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(Cliente5, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 70, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(textocliente, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 73, Short.MAX_VALUE)))))
+                                .addGap(0, 0, Short.MAX_VALUE)))))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -146,10 +147,10 @@ public class GuiPantallaInicial extends javax.swing.JFrame {
                             .addComponent(Pedido4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(Pedido3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(Pedido2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 121, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(Horapedido1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(textohorapedido, javax.swing.GroupLayout.DEFAULT_SIZE, 198, Short.MAX_VALUE)
+                            .addComponent(textohorapedido, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(Horapedido2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(Horapedido3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(Horapedido5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -171,19 +172,19 @@ public class GuiPantallaInicial extends javax.swing.JFrame {
                         .addComponent(Pedido1, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))))
             .addGroup(layout.createSequentialGroup()
-                .addGap(221, 221, 221)
+                .addContainerGap(514, Short.MAX_VALUE)
                 .addComponent(botonDePedido, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 250, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(182, 182, 182)
                     .addComponent(Pedido5, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(439, Short.MAX_VALUE)))
+                    .addContainerGap(601, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(botonDePedido)
                 .addGap(52, 52, 52)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -255,37 +256,38 @@ public class GuiPantallaInicial extends javax.swing.JFrame {
         GuiPantallaPedido unPedido = new GuiPantallaPedido();
         unPedido.setPantallaListado(this);
         unPedido.setVisible(true);
-        
+
     }//GEN-LAST:event_generarPedido
 
-    private void iniciarTimer (){
+    private void iniciarTimer() {
         TimerTask task = new TimerTask() {
             @Override
             public void run() {
-              
-                for (int i = 0; i < pedidos.size(); i++){
+
+                for (int i = 0; i < pedidos.size(); i++) {
                     Pedido pedidoActual = pedidos.get(i);
-                    if (pedidoActual.estaAtrasado(new Date())){
+                    if (pedidoActual.estaAtrasado(new Date())) {
                         if (i == 0) {
                             Tiempodemora1.setForeground(Color.red);
-                        } else if (i == 1){
+                        } else if (i == 1) {
                             Tiempodemora2.setForeground(Color.red);
-                        } else if (i == 2){
+                        } else if (i == 2) {
                             Tiempodemora3.setForeground(Color.red);
-                        } else if (i == 3){
+                        } else if (i == 3) {
                             Tiempodemora4.setForeground(Color.red);
-                        } else if (i == 4){
+                        } else if (i == 4) {
                             Tiempodemora5.setForeground(Color.red);
                         }
                     }
                 }
             }
         };
-        
+
         Timer timer = new Timer();
         timer.schedule(task, 0, 10000);
-        
+
     }
+
     /**
      * @param args the command line arguments
      */
@@ -350,23 +352,23 @@ public class GuiPantallaInicial extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
     public void agregarPedido(Pedido pedidoRealizado) {
-        
         this.pedidos.add(pedidoRealizado);
-        
         int posicion = this.pedidos.size();
-        
-        if(posicion == 1) {
-            Cliente1.setText(pedidoRealizado.getCliente());    
+        String[] partes = pedidoRealizado.getHoraPedido().split(":");
+        String hora = partes[0];
+        String minutos = partes[1];
+        if (posicion == 1) {
+            Cliente1.setText(pedidoRealizado.getCliente());
+            Horapedido1.setText(hora + " : " + minutos);
         } else if (posicion == 2) {
-            Cliente2.setText(pedidoRealizado.getCliente());    
+            Cliente2.setText(pedidoRealizado.getCliente());
         } else if (posicion == 3) {
-            Cliente3.setText(pedidoRealizado.getCliente());    
+            Cliente3.setText(pedidoRealizado.getCliente());
         } else if (posicion == 4) {
-            Cliente4.setText(pedidoRealizado.getCliente());    
+            Cliente4.setText(pedidoRealizado.getCliente());
         } else if (posicion == 5) {
-            Cliente5.setText(pedidoRealizado.getCliente());    
+            Cliente5.setText(pedidoRealizado.getCliente());
         }
-        
-        
+
     }
 }
