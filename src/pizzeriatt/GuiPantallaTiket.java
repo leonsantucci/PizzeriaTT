@@ -5,6 +5,14 @@
  */
 package pizzeriatt;
 
+import java.awt.Component;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.print.PageFormat;
+import java.awt.print.Printable;
+import java.awt.print.PrinterException;
+import java.awt.print.PrinterJob;
+
 /**
  *
  * @author ITUOM
@@ -74,6 +82,11 @@ public class GuiPantallaTiket extends javax.swing.JFrame {
 
         jButtonImprimir1.setForeground(new java.awt.Color(0, 153, 0));
         jButtonImprimir1.setText("Imprimir Ticket");
+        jButtonImprimir1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                imprimir(evt);
+            }
+        });
 
         jLabelTotal1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
@@ -82,7 +95,7 @@ public class GuiPantallaTiket extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabelHoraPedido, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -99,7 +112,7 @@ public class GuiPantallaTiket extends javax.swing.JFrame {
                         .addGap(0, 5, Short.MAX_VALUE))
                     .addComponent(jLabelHoraDemora, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabelTotalFinal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -132,6 +145,37 @@ public class GuiPantallaTiket extends javax.swing.JFrame {
     private void jButtonCerrarTicket(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCerrarTicket
         dispose();
     }//GEN-LAST:event_jButtonCerrarTicket
+
+    private void imprimir(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_imprimir
+        printComponenet(this);
+    }//GEN-LAST:event_imprimir
+
+    public void printComponenet(Component component) {
+        PrinterJob pj = PrinterJob.getPrinterJob();
+        pj.setJobName(" Print Component ");
+
+        pj.setPrintable(new Printable() {
+            public int print(Graphics pg, PageFormat pf, int pageNum) {
+                if (pageNum > 0) {
+                    return Printable.NO_SUCH_PAGE;
+                }
+
+                Graphics2D g2 = (Graphics2D) pg;
+                g2.translate(pf.getImageableX(), pf.getImageableY());
+                component.paint(g2);
+                return Printable.PAGE_EXISTS;
+            }
+        });
+        if (pj.printDialog() == false) {
+            return;
+        }
+
+        try {
+            pj.print();
+        } catch (PrinterException ex) {
+            // handle exception
+        }
+    }
 
     /**
      * @param args the command line arguments
