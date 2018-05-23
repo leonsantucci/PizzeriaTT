@@ -369,12 +369,11 @@ public class GuiPantallaPedido extends javax.swing.JFrame {
             if (nombreIngresado.isEmpty()){
                 variableErrorCliente.setText("Ingrese un nombre");
             } else {
-                ticket.jLabelNombreCliente.setText(VariableCliente.getText());
-                ticket.jLabelHoraPedido.setText(variableHora.getText());
-                ticket.jLabelMinutosPedido.setText(VariableMinuto.getText());
-                ticket.jLabelHoraDemora.setText(variableDemora.getText());
-                ticket.jLabelTotalFinal.setText(variablePresiototal.getText());
-                ticket.jLabelObservacion.setText(variableObservacion.getText());
+                ticket.jLabelNombreCliente.setText("Cliente: " + VariableCliente.getText());
+                ticket.jLabelHoraPedido.setText("Hora pedido: " + variableHora.getText() + ":" + VariableMinuto.getText());
+                ticket.jLabelHoraDemora.setText("Demora: " + variableDemora.getText());
+                ticket.jLabelTotalFinal.setText("Costo total: " + variablePresiototal.getText());
+                ticket.jLabelObservacion.setText("Observacion: " + variableObservacion.getText());
                 
                 pedidoRealizado.setCliente(nombreIngresado);
                 pantallaInicial.agregarPedido(pedidoRealizado);
