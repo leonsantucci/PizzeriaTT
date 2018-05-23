@@ -232,7 +232,6 @@ public class GuiPantallaInicial extends javax.swing.JFrame {
         GuiPantallaPedido unPedido = new GuiPantallaPedido();
         unPedido.setPantallaListado(this);
         unPedido.setVisible(true);
-
     }//GEN-LAST:event_generarPedido
 
     private void iniciarTimer() {
@@ -338,37 +337,37 @@ public class GuiPantallaInicial extends javax.swing.JFrame {
             Cliente1.setText(pedidoRealizado.getCliente());
             Horapedido1.setText(hora + " : " + minutos);
             Tiempodemora1.setText(demora);
-            Pedido1.setText(pedidoRealizado.getUnaPizza().getVariedadPizza().getNombre()  + ", " + 
-                    pedidoRealizado.getUnaPizza().getTamanio() + ", " + pedidoRealizado.getUnaPizza().getTipo()
-            + ", cantidad " + pedidoRealizado.getCantidad());
+            Pedido1.setText(pedidoRealizado.getUnaPizza().getVariedadPizza().getNombre() + ", "
+                    + pedidoRealizado.getUnaPizza().getTamanio() + ", " + pedidoRealizado.getUnaPizza().getTipo()
+                    + ", cantidad " + pedidoRealizado.getCantidad());
         } else if (posicion == 2) {
             Cliente2.setText(pedidoRealizado.getCliente());
             Horapedido2.setText(hora + " : " + minutos);
             Tiempodemora2.setText(demora);
-            Pedido2.setText(pedidoRealizado.getUnaPizza().getVariedadPizza().getNombre()  + ", " + 
-                    pedidoRealizado.getUnaPizza().getTamanio() + ", " + pedidoRealizado.getUnaPizza().getTipo()
-            + ", cantidad " + pedidoRealizado.getCantidad());
+            Pedido2.setText(pedidoRealizado.getUnaPizza().getVariedadPizza().getNombre() + ", "
+                    + pedidoRealizado.getUnaPizza().getTamanio() + ", " + pedidoRealizado.getUnaPizza().getTipo()
+                    + ", cantidad " + pedidoRealizado.getCantidad());
         } else if (posicion == 3) {
             Cliente3.setText(pedidoRealizado.getCliente());
             Horapedido3.setText(hora + " : " + minutos);
             Tiempodemora3.setText(demora);
-            Pedido3.setText(pedidoRealizado.getUnaPizza().getVariedadPizza().getNombre()  + ", " + 
-                    pedidoRealizado.getUnaPizza().getTamanio() + ", " + pedidoRealizado.getUnaPizza().getTipo()
-            + ", cantidad " + pedidoRealizado.getCantidad());
+            Pedido3.setText(pedidoRealizado.getUnaPizza().getVariedadPizza().getNombre() + ", "
+                    + pedidoRealizado.getUnaPizza().getTamanio() + ", " + pedidoRealizado.getUnaPizza().getTipo()
+                    + ", cantidad " + pedidoRealizado.getCantidad());
         } else if (posicion == 4) {
             Cliente4.setText(pedidoRealizado.getCliente());
             Horapedido4.setText(hora + " : " + minutos);
             Tiempodemora4.setText(demora);
-            Pedido4.setText(pedidoRealizado.getUnaPizza().getVariedadPizza().getNombre()  + ", " + 
-                    pedidoRealizado.getUnaPizza().getTamanio() + ", " + pedidoRealizado.getUnaPizza().getTipo()
-            + ", cantidad " + pedidoRealizado.getCantidad());
+            Pedido4.setText(pedidoRealizado.getUnaPizza().getVariedadPizza().getNombre() + ", "
+                    + pedidoRealizado.getUnaPizza().getTamanio() + ", " + pedidoRealizado.getUnaPizza().getTipo()
+                    + ", cantidad " + pedidoRealizado.getCantidad());
         } else if (posicion == 5) {
             Cliente5.setText(pedidoRealizado.getCliente());
             Horapedido5.setText(hora + " : " + minutos);
             Tiempodemora5.setText(demora);
-            Pedido5.setText(pedidoRealizado.getUnaPizza().getVariedadPizza().getNombre()  + ", " + 
-                    pedidoRealizado.getUnaPizza().getTamanio() + ", " + pedidoRealizado.getUnaPizza().getTipo()
-            + ", cantidad " + pedidoRealizado.getCantidad());
+            Pedido5.setText(pedidoRealizado.getUnaPizza().getVariedadPizza().getNombre() + ", "
+                    + pedidoRealizado.getUnaPizza().getTamanio() + ", " + pedidoRealizado.getUnaPizza().getTipo()
+                    + ", cantidad " + pedidoRealizado.getCantidad());
         }
 
     }
