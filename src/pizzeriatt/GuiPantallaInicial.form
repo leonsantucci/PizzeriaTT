@@ -37,38 +37,40 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="Pedido3" max="32767" attributes="0"/>
-                          <Component id="Pedido5" max="32767" attributes="0"/>
-                          <Component id="Pedido4" max="32767" attributes="0"/>
-                          <Component id="textoPedido" max="32767" attributes="0"/>
-                          <Component id="Pedido2" alignment="1" min="-2" pref="90" max="-2" attributes="0"/>
+                          <Component id="Pedido3" alignment="0" pref="237" max="32767" attributes="0"/>
+                          <Component id="Pedido2" alignment="0" max="32767" attributes="0"/>
+                          <Component id="Pedido4" alignment="0" max="32767" attributes="0"/>
+                          <Component id="Pedido5" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="Horapedido5" alignment="0" max="32767" attributes="0"/>
-                          <Component id="Horapedido4" alignment="0" max="32767" attributes="0"/>
-                          <Component id="Horapedido3" alignment="0" max="32767" attributes="0"/>
-                          <Component id="Horapedido2" alignment="1" max="32767" attributes="0"/>
-                          <Component id="textohorapedido" pref="103" max="32767" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="Tiempodemora3" alignment="0" min="-2" pref="90" max="-2" attributes="0"/>
-                          <Component id="textotiempodemora" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="Tiempodemora4" min="-2" pref="90" max="-2" attributes="0"/>
-                          <Component id="Tiempodemora5" min="-2" pref="90" max="-2" attributes="0"/>
-                          <Component id="Tiempodemora2" alignment="0" min="-2" pref="90" max="-2" attributes="0"/>
+                          <Component id="Horapedido5" alignment="1" max="32767" attributes="0"/>
+                          <Component id="Horapedido4" alignment="1" max="32767" attributes="0"/>
+                          <Component id="Horapedido3" alignment="1" max="32767" attributes="0"/>
+                          <Component id="Horapedido2" max="32767" attributes="0"/>
                       </Group>
                   </Group>
-                  <Group type="102" attributes="0">
-                      <Component id="Pedido1" min="-2" pref="90" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="Pedido1" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="Horapedido1" max="32767" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="Tiempodemora1" min="-2" pref="90" max="-2" attributes="0"/>
+                      <Component id="Horapedido1" min="-2" pref="70" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="textoPedido" pref="242" max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
+                      <Component id="textohorapedido" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="173" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                  <Component id="Tiempodemora1" pref="90" max="32767" attributes="0"/>
+                  <Component id="Tiempodemora2" max="32767" attributes="0"/>
+                  <Component id="Tiempodemora3" pref="90" max="32767" attributes="0"/>
+                  <Component id="Tiempodemora4" pref="90" max="32767" attributes="0"/>
+                  <Component id="Tiempodemora5" pref="90" max="32767" attributes="0"/>
+                  <Component id="textotiempodemora" alignment="1" max="32767" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
           </Group>
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -108,7 +110,9 @@
                           <Component id="Horapedido3" min="-2" pref="20" max="-2" attributes="0"/>
                           <Component id="Tiempodemora3" min="-2" pref="20" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="Tiempodemora4" min="-2" pref="20" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="Horapedido5" min="-2" pref="20" max="-2" attributes="0"/>
                           <Component id="Tiempodemora5" min="-2" pref="20" max="-2" attributes="0"/>
@@ -135,7 +139,6 @@
                           <Component id="Pedido4" min="-2" pref="20" max="-2" attributes="0"/>
                           <Component id="Cliente4" alignment="0" min="-2" pref="20" max="-2" attributes="0"/>
                           <Component id="Horapedido4" alignment="0" min="-2" pref="20" max="-2" attributes="0"/>
-                          <Component id="Tiempodemora4" alignment="0" min="-2" pref="20" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -170,11 +173,13 @@
     </Component>
     <Component class="javax.swing.JLabel" name="textotiempodemora">
       <Properties>
+        <Property name="horizontalAlignment" type="int" value="2"/>
         <Property name="text" type="java.lang.String" value="    Tiempo Demora"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="textoPedido">
       <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
         <Property name="text" type="java.lang.String" value="    Pedido"/>
       </Properties>
     </Component>

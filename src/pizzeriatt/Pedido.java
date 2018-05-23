@@ -86,6 +86,10 @@ public class Pedido {
     public int getTiempoDemora() {
         return tiempoDemora;
     }
+
+    public Pizza getUnaPizza() {
+        return unaPizza;
+    }
     
     
     

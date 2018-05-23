@@ -24,6 +24,10 @@ public class Variedad {
     public double getPrecio() {
         return precio;
     }
+
+    public String getNombre() {
+        return nombre;
+    }
     
     
     
