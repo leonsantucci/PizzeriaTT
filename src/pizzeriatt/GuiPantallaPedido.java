@@ -14,6 +14,7 @@ import pizzeriatt.Variedad;
 public class GuiPantallaPedido extends javax.swing.JFrame {
 
     private GuiPantallaInicial pantallaInicial;
+    private double precioTotal;
 
     /**
      * Creates new form Pizzeriaa
@@ -51,7 +52,6 @@ public class GuiPantallaPedido extends javax.swing.JFrame {
         TextCliente = new javax.swing.JLabel();
         textDemora = new javax.swing.JLabel();
         TextHora = new javax.swing.JLabel();
-        variablePresiototal = new javax.swing.JTextField();
         ImagenYtextVariedad = new javax.swing.JLabel();
         ImagenYTextorciones = new javax.swing.JLabel();
         ImagenYTextTipoDePizza = new javax.swing.JLabel();
@@ -62,9 +62,7 @@ public class GuiPantallaPedido extends javax.swing.JFrame {
         VariedadPorciones = new javax.swing.JComboBox<>();
         VariedadTipoDePizza = new javax.swing.JComboBox<>();
         variableErrorDeIngresCantidadDePizza = new javax.swing.JLabel();
-        VariableTextPresioTotal = new javax.swing.JLabel();
         TextCantidadDePizza = new javax.swing.JLabel();
-        Flecha = new javax.swing.JLabel();
         Flechita2 = new javax.swing.JLabel();
         Flechita = new javax.swing.JLabel();
         TextObservacion = new javax.swing.JLabel();
@@ -143,13 +141,8 @@ public class GuiPantallaPedido extends javax.swing.JFrame {
         variableErrorDeIngresCantidadDePizza.setForeground(new java.awt.Color(204, 0, 0));
         variableErrorDeIngresCantidadDePizza.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
-        VariableTextPresioTotal.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        VariableTextPresioTotal.setText("Precio Total ");
-
         TextCantidadDePizza.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         TextCantidadDePizza.setText("Cantidad de Pizza");
-
-        Flecha.setText("<----------------------------------------------------------------------------");
 
         Flechita2.setText("------------------------------------->");
 
@@ -238,13 +231,7 @@ public class GuiPantallaPedido extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(variableErrorhora, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(VariableTextPresioTotal)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(variablePresiototal, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Flecha)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(419, 419, 419)
                         .addComponent(VariableEjecutar)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -299,17 +286,8 @@ public class GuiPantallaPedido extends javax.swing.JFrame {
                         .addComponent(VariedadPizza, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(VariedadTipoDePizza, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(variableErrorDeIngresCantidadDePizza, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(39, 39, 39)
-                        .addComponent(VariableTextPresioTotal)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(variablePresiototal, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Flecha)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
-                        .addComponent(VariableEjecutar)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
+                .addComponent(VariableEjecutar)
                 .addContainerGap())
         );
 
@@ -362,7 +340,7 @@ public class GuiPantallaPedido extends javax.swing.JFrame {
             Integer demora = Integer.valueOf(variableDemora.getText());
             Pedido pedidoRealizado = new Pedido(VariableCliente.getText(), variableHora.getText() + ":" + VariableMinuto.getText(), demora, pizzaSeleccionada, cantidad);
  
-            variablePresiototal.setText(String.valueOf(pedidoRealizado.getPrecio()));
+            String precioTotal = String.valueOf(pedidoRealizado.getPrecio());
             
             String nombreIngresado = VariableCliente.getText();
             nombreIngresado = nombreIngresado.trim();
@@ -372,7 +350,7 @@ public class GuiPantallaPedido extends javax.swing.JFrame {
                 ticket.jLabelNombreCliente.setText("Cliente: " + VariableCliente.getText());
                 ticket.jLabelHoraPedido.setText("Hora pedido: " + variableHora.getText() + ":" + VariableMinuto.getText());
                 ticket.jLabelHoraDemora.setText("Demora: " + variableDemora.getText());
-                ticket.jLabelTotalFinal.setText("Costo total: " + variablePresiototal.getText());
+                ticket.jLabelTotalFinal.setText("Costo total: " + precioTotal);
                 ticket.jLabelObservacion.setText("Observacion: " + variableObservacion.getText());
                 
                 pedidoRealizado.setCliente(nombreIngresado);
@@ -435,7 +413,6 @@ public class GuiPantallaPedido extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel Flecha;
     private javax.swing.JLabel Flechita;
     private javax.swing.JLabel Flechita2;
     private javax.swing.JLabel ImagenYTextTipoDePizza;
@@ -450,7 +427,6 @@ public class GuiPantallaPedido extends javax.swing.JFrame {
     private javax.swing.JTextField VariableCliente;
     private javax.swing.JButton VariableEjecutar;
     private javax.swing.JTextField VariableMinuto;
-    private javax.swing.JLabel VariableTextPresioTotal;
     private javax.swing.JComboBox<String> VariedadPizza;
     private javax.swing.JComboBox<String> VariedadPorciones;
     private javax.swing.JComboBox<String> VariedadTipoDePizza;
@@ -466,7 +442,6 @@ public class GuiPantallaPedido extends javax.swing.JFrame {
     private javax.swing.JLabel variableErrorhora;
     private javax.swing.JTextField variableHora;
     private javax.swing.JTextField variableObservacion;
-    private javax.swing.JTextField variablePresiototal;
     // End of variables declaration//GEN-END:variables
 
     public void setPantallaListado(GuiPantallaInicial pantallaInicial) {
