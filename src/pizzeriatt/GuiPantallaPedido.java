@@ -373,7 +373,7 @@ public class GuiPantallaPedido extends javax.swing.JFrame {
                 ticket.jLabelHoraPedido.setText(variableHora.getText());
                 ticket.jLabelMinutosPedido.setText(VariableMinuto.getText());
                 ticket.jLabelHoraDemora.setText(variableDemora.getText());
-                ticket.jLabelCostoTotal.setText(variablePresiototal.getText());
+                ticket.jLabelTotalFinal.setText(variablePresiototal.getText());
                 ticket.jLabelObservacion.setText(variableObservacion.getText());
                 
                 pedidoRealizado.setCliente(nombreIngresado);
