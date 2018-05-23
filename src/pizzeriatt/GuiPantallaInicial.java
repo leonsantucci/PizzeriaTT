@@ -334,12 +334,16 @@ public class GuiPantallaInicial extends javax.swing.JFrame {
             Horapedido1.setText(hora + " : " + minutos);
         } else if (posicion == 2) {
             Cliente2.setText(pedidoRealizado.getCliente());
+            Horapedido2.setText(hora + " : " + minutos);
         } else if (posicion == 3) {
             Cliente3.setText(pedidoRealizado.getCliente());
+            Horapedido3.setText(hora + " : " + minutos);
         } else if (posicion == 4) {
             Cliente4.setText(pedidoRealizado.getCliente());
+            Horapedido4.setText(hora + " : " + minutos);
         } else if (posicion == 5) {
             Cliente5.setText(pedidoRealizado.getCliente());
+            Horapedido5.setText(hora + " : " + minutos);
         }
 
     }

@@ -1,6 +1,7 @@
 package pizzeriatt;
 
 import java.awt.event.ActionEvent;
+import java.util.Calendar;
 import pizzeriatt.GuiPantallaTiket;
 import pizzeriatt.Pizza;
 import pizzeriatt.Tipo;
@@ -13,14 +14,24 @@ import pizzeriatt.Variedad;
 public class GuiPantallaPedido extends javax.swing.JFrame {
 
     private GuiPantallaInicial pantallaInicial;
+    private String hora = "10:10";
 
     /**
      * Creates new form Pizzeriaa
      */
     public GuiPantallaPedido() {
         initComponents();
+        configurarHora();
     }
 
+     private void configurarHora(){
+         Calendar cal = Calendar.getInstance();
+         int horaActual = cal.get(Calendar.HOUR_OF_DAY);
+         int minutosActual = cal.get(Calendar.MINUTE);
+         
+         variableHora.setText(String.valueOf(horaActual));
+         VariableMinuto.setText(String.valueOf(minutosActual));
+     } 
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
