@@ -350,7 +350,7 @@ public class GuiPantallaPedido extends javax.swing.JFrame {
         try {
             int cantidad = Integer.valueOf(VariableCantidadPizzaIngresadas.getText());
             Integer demora = Integer.valueOf(variableDemora.getText());
-            Pedido pedidoRealizado = new Pedido(VariableCliente.getText(), variableHora.getText(), demora, pizzaSeleccionada, cantidad);
+            Pedido pedidoRealizado = new Pedido(VariableCliente.getText(), variableHora.getText() + ":" + VariableMinuto.getText(), demora, pizzaSeleccionada, cantidad);
  
             variablePresiototal.setText(String.valueOf(pedidoRealizado.getPrecio()));
             
