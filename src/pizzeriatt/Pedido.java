@@ -82,6 +82,11 @@ public class Pedido {
     public void setHoraPedido(String horaPedido) {
         this.horaPedido = horaPedido;
     }
+
+    public int getTiempoDemora() {
+        return tiempoDemora;
+    }
+    
     
     
     

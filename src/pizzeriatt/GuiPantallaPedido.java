@@ -14,7 +14,6 @@ import pizzeriatt.Variedad;
 public class GuiPantallaPedido extends javax.swing.JFrame {
 
     private GuiPantallaInicial pantallaInicial;
-    private String hora = "10:10";
 
     /**
      * Creates new form Pizzeriaa

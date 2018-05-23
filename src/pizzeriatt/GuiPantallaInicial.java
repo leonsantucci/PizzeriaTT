@@ -159,7 +159,7 @@ public class GuiPantallaInicial extends javax.swing.JFrame {
                         .addComponent(Horapedido1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(Tiempodemora1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(173, 173, 173))
+                .addContainerGap(173, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(botonDePedido, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -329,21 +329,27 @@ public class GuiPantallaInicial extends javax.swing.JFrame {
         String[] partes = pedidoRealizado.getHoraPedido().split(":");
         String hora = partes[0];
         String minutos = partes[1];
+        String demora = String.valueOf(pedidoRealizado.getTiempoDemora());
         if (posicion == 1) {
             Cliente1.setText(pedidoRealizado.getCliente());
             Horapedido1.setText(hora + " : " + minutos);
+            Tiempodemora1.setText(demora);
         } else if (posicion == 2) {
             Cliente2.setText(pedidoRealizado.getCliente());
             Horapedido2.setText(hora + " : " + minutos);
+            Tiempodemora2.setText(demora);
         } else if (posicion == 3) {
             Cliente3.setText(pedidoRealizado.getCliente());
             Horapedido3.setText(hora + " : " + minutos);
+            Tiempodemora3.setText(demora);
         } else if (posicion == 4) {
             Cliente4.setText(pedidoRealizado.getCliente());
             Horapedido4.setText(hora + " : " + minutos);
+            Tiempodemora4.setText(demora);
         } else if (posicion == 5) {
             Cliente5.setText(pedidoRealizado.getCliente());
             Horapedido5.setText(hora + " : " + minutos);
+            Tiempodemora5.setText(demora);
         }
 
     }
