@@ -3,6 +3,9 @@
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+      <Color id="Cursor Por defecto"/>
+    </Property>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
@@ -42,14 +45,21 @@
                   <Component id="Pedido5" alignment="0" max="32767" attributes="0"/>
                   <Component id="textoPedido" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="textohorapedido" pref="71" max="32767" attributes="0"/>
-                  <Component id="Horapedido5" alignment="1" max="32767" attributes="0"/>
-                  <Component id="Horapedido4" alignment="1" max="32767" attributes="0"/>
-                  <Component id="Horapedido3" alignment="1" max="32767" attributes="0"/>
-                  <Component id="Horapedido2" max="32767" attributes="0"/>
-                  <Component id="Horapedido1" max="32767" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <EmptySpace pref="11" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="textohorapedido" pref="75" max="32767" attributes="0"/>
+                          <Component id="Horapedido5" alignment="1" max="32767" attributes="0"/>
+                          <Component id="Horapedido4" alignment="1" max="32767" attributes="0"/>
+                          <Component id="Horapedido2" max="32767" attributes="0"/>
+                          <Component id="Horapedido1" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="Horapedido3" max="32767" attributes="0"/>
+                  </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" max="-2" attributes="0">
@@ -61,18 +71,12 @@
                   <Component id="textotiempodemora" alignment="1" max="32767" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jButtonEntregado2" min="-2" max="-2" attributes="0"/>
-                              <Component id="jButtonEntregado3" alignment="1" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Component id="jButtonEntregado4" alignment="1" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Component id="jButtonEntregado5" alignment="1" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Component id="jButtonEntregado1" alignment="0" min="-2" pref="83" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="jButtonEntregado2" alignment="0" pref="93" max="32767" attributes="0"/>
+                  <Component id="jButtonEntregado3" alignment="0" max="32767" attributes="0"/>
+                  <Component id="jButtonEntregado1" max="32767" attributes="0"/>
+                  <Component id="jButtonEntregado4" alignment="1" max="32767" attributes="0"/>
+                  <Component id="jButtonEntregado5" alignment="1" max="32767" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -128,15 +132,15 @@
               <Group type="103" groupAlignment="1" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="Horapedido4" min="-2" pref="20" max="-2" attributes="0"/>
                           <Component id="Tiempodemora3" min="-2" pref="20" max="-2" attributes="0"/>
                           <Component id="jButtonEntregado3" min="-2" pref="20" max="-2" attributes="0"/>
+                          <Component id="Horapedido3" min="-2" pref="20" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="Horapedido3" min="-2" pref="20" max="-2" attributes="0"/>
                           <Component id="Tiempodemora4" min="-2" pref="20" max="-2" attributes="0"/>
                           <Component id="jButtonEntregado4" min="-2" pref="20" max="-2" attributes="0"/>
+                          <Component id="Horapedido4" min="-2" pref="20" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -179,7 +183,7 @@
     <Component class="javax.swing.JLabel" name="textocliente">
       <Properties>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="      Cliente"/>
+        <Property name="text" type="java.lang.String" value="Cliente"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="textohorapedido">
@@ -191,7 +195,7 @@
     <Component class="javax.swing.JLabel" name="textotiempodemora">
       <Properties>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="Demora"/>
+        <Property name="text" type="java.lang.String" value="Tiempo Demora"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="textoPedido">
@@ -292,6 +296,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="Horapedido1">
       <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
             <LineBorder/>
@@ -301,6 +306,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="Horapedido2">
       <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
             <LineBorder/>
@@ -310,6 +316,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="Horapedido5">
       <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
             <LineBorder/>
@@ -319,6 +326,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="Horapedido3">
       <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
             <LineBorder/>
@@ -328,6 +336,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="Tiempodemora1">
       <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
             <LineBorder/>
@@ -337,15 +346,20 @@
     </Component>
     <Component class="javax.swing.JLabel" name="Tiempodemora2">
       <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
             <LineBorder/>
           </Border>
         </Property>
+        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+          <Color id="Cursor Por defecto"/>
+        </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="Tiempodemora3">
       <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
             <LineBorder/>
@@ -355,6 +369,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="Tiempodemora4">
       <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
             <LineBorder/>
@@ -364,6 +379,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="Tiempodemora5">
       <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
             <LineBorder/>
@@ -373,6 +389,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="Horapedido4">
       <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
             <LineBorder/>
@@ -385,7 +402,7 @@
         <Property name="text" type="java.lang.String" value="Entregado"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonEntregado1ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ClickEnEntregado1"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jButtonEntregado2">

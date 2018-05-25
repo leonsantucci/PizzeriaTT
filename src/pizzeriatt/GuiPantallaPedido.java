@@ -128,7 +128,7 @@ public class GuiPantallaPedido extends javax.swing.JFrame {
         Puntos.setText(":");
 
         VariedadPizza.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        VariedadPizza.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Muzarella", "jamon y morron", "fugazeta", "cuatro queso" }));
+        VariedadPizza.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Muzarella", "jamon y morron", "fugazeta", "cuatro quesos" }));
 
         VariedadPorciones.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         VariedadPorciones.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "8", "10", "12" }));

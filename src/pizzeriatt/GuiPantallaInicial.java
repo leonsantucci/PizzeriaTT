@@ -66,6 +66,7 @@ public class GuiPantallaInicial extends javax.swing.JFrame {
         jButtonEntregado5 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         botonDePedido.setText("CREAR PEDIDO");
         botonDePedido.addActionListener(new java.awt.event.ActionListener() {
@@ -75,13 +76,13 @@ public class GuiPantallaInicial extends javax.swing.JFrame {
         });
 
         textocliente.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        textocliente.setText("      Cliente");
+        textocliente.setText("Cliente");
 
         textohorapedido.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         textohorapedido.setText("Hora pedido");
 
         textotiempodemora.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        textotiempodemora.setText("Demora");
+        textotiempodemora.setText("Tiempo Demora");
 
         textoPedido.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         textoPedido.setText("    Pedido");
@@ -106,30 +107,41 @@ public class GuiPantallaInicial extends javax.swing.JFrame {
 
         Pedido3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        Horapedido1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Horapedido1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        Horapedido2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Horapedido2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        Horapedido5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Horapedido5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        Horapedido3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Horapedido3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        Tiempodemora1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Tiempodemora1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        Tiempodemora2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Tiempodemora2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        Tiempodemora2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
+        Tiempodemora3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Tiempodemora3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        Tiempodemora4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Tiempodemora4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        Tiempodemora5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Tiempodemora5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        Horapedido4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Horapedido4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jButtonEntregado1.setText("Entregado");
         jButtonEntregado1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonEntregado1ActionPerformed(evt);
+                ClickEnEntregado1(evt);
             }
         });
 
@@ -182,14 +194,18 @@ public class GuiPantallaInicial extends javax.swing.JFrame {
                     .addComponent(Pedido4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(Pedido5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(textoPedido, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(textohorapedido, javax.swing.GroupLayout.DEFAULT_SIZE, 71, Short.MAX_VALUE)
-                    .addComponent(Horapedido5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Horapedido4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Horapedido3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Horapedido2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Horapedido1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(textohorapedido, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE)
+                            .addComponent(Horapedido5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(Horapedido4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(Horapedido2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(Horapedido1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(Horapedido3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(Tiempodemora1, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
@@ -199,15 +215,12 @@ public class GuiPantallaInicial extends javax.swing.JFrame {
                     .addComponent(Tiempodemora5, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
                     .addComponent(textotiempodemora, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jButtonEntregado2)
-                                .addComponent(jButtonEntregado3, javax.swing.GroupLayout.Alignment.TRAILING))
-                            .addComponent(jButtonEntregado4, javax.swing.GroupLayout.Alignment.TRAILING))
-                        .addComponent(jButtonEntregado5, javax.swing.GroupLayout.Alignment.TRAILING))
-                    .addComponent(jButtonEntregado1, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jButtonEntregado2, javax.swing.GroupLayout.DEFAULT_SIZE, 93, Short.MAX_VALUE)
+                    .addComponent(jButtonEntregado3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButtonEntregado1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButtonEntregado4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButtonEntregado5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
             .addGroup(layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
@@ -250,14 +263,14 @@ public class GuiPantallaInicial extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Horapedido4, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(Tiempodemora3, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButtonEntregado3, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jButtonEntregado3, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Horapedido3, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(8, 8, 8)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Horapedido3, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(Tiempodemora4, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButtonEntregado4, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jButtonEntregado4, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Horapedido4, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(Tiempodemora5, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -287,24 +300,39 @@ public class GuiPantallaInicial extends javax.swing.JFrame {
         unPedido.setVisible(true);
     }//GEN-LAST:event_generarPedido
 
-    private void jButtonEntregado1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEntregado1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonEntregado1ActionPerformed
+    private void ClickEnEntregado1(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ClickEnEntregado1
+        Cliente1.setText("");
+        Pedido1.setText("");
+        Horapedido1.setText("");
+        Tiempodemora1.setText("");
+    }//GEN-LAST:event_ClickEnEntregado1
 
     private void ClickEnEntregado2(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ClickEnEntregado2
-        // TODO add your handling code here:
+        Cliente2.setText("");
+        Pedido2.setText("");
+        Horapedido2.setText("");
+        Tiempodemora2.setText("");
     }//GEN-LAST:event_ClickEnEntregado2
 
     private void ClickEnEntregado3(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ClickEnEntregado3
-        // TODO add your handling code here:
+        Cliente3.setText("");
+        Pedido3.setText("");
+        Horapedido3.setText("");
+        Tiempodemora3.setText("");
     }//GEN-LAST:event_ClickEnEntregado3
 
     private void ClickEnEntregado4(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ClickEnEntregado4
-        // TODO add your handling code here:
+        Cliente4.setText("");
+        Pedido4.setText("");
+        Horapedido4.setText("");
+        Tiempodemora4.setText("");
     }//GEN-LAST:event_ClickEnEntregado4
 
     private void ClickEnEntregado5(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ClickEnEntregado5
-        // TODO add your handling code here:
+        Cliente5.setText("");
+        Pedido5.setText("");
+        Horapedido5.setText("");
+        Tiempodemora5.setText("");
     }//GEN-LAST:event_ClickEnEntregado5
 
     private void iniciarTimer() {
