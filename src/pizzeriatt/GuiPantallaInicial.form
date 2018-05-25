@@ -34,29 +34,22 @@
                   <Component id="textocliente" max="32767" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                  <Component id="Pedido1" max="32767" attributes="0"/>
+                  <Component id="Pedido3" alignment="0" pref="237" max="32767" attributes="0"/>
+                  <Component id="Pedido2" alignment="0" max="32767" attributes="0"/>
+                  <Component id="Pedido4" alignment="0" max="32767" attributes="0"/>
+                  <Component id="Pedido5" alignment="0" max="32767" attributes="0"/>
+                  <Component id="textoPedido" max="32767" attributes="0"/>
+              </Group>
+              <EmptySpace max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <Component id="textoPedido" pref="258" max="32767" attributes="0"/>
-                      <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
-                      <Component id="textohorapedido" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                          <Component id="Pedido1" max="32767" attributes="0"/>
-                          <Component id="Pedido3" alignment="0" pref="237" max="32767" attributes="0"/>
-                          <Component id="Pedido2" alignment="0" max="32767" attributes="0"/>
-                          <Component id="Pedido4" alignment="0" max="32767" attributes="0"/>
-                          <Component id="Pedido5" alignment="0" max="32767" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="Horapedido5" alignment="1" max="32767" attributes="0"/>
-                          <Component id="Horapedido4" alignment="1" max="32767" attributes="0"/>
-                          <Component id="Horapedido3" alignment="1" max="32767" attributes="0"/>
-                          <Component id="Horapedido2" max="32767" attributes="0"/>
-                          <Component id="Horapedido1" max="32767" attributes="0"/>
-                      </Group>
-                  </Group>
+                  <Component id="textohorapedido" pref="71" max="32767" attributes="0"/>
+                  <Component id="Horapedido5" alignment="1" max="32767" attributes="0"/>
+                  <Component id="Horapedido4" alignment="1" max="32767" attributes="0"/>
+                  <Component id="Horapedido3" alignment="1" max="32767" attributes="0"/>
+                  <Component id="Horapedido2" max="32767" attributes="0"/>
+                  <Component id="Horapedido1" max="32767" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" max="-2" attributes="0">
@@ -67,7 +60,21 @@
                   <Component id="Tiempodemora5" pref="90" max="32767" attributes="0"/>
                   <Component id="textotiempodemora" alignment="1" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jButtonEntregado2" min="-2" max="-2" attributes="0"/>
+                              <Component id="jButtonEntregado3" alignment="1" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="jButtonEntregado4" alignment="1" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Component id="jButtonEntregado5" alignment="1" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Component id="jButtonEntregado1" alignment="0" min="-2" pref="83" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -91,32 +98,8 @@
                   </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="Horapedido1" alignment="0" min="-2" pref="20" max="-2" attributes="0"/>
-                          <Component id="Tiempodemora1" alignment="0" min="-2" pref="20" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="Tiempodemora2" min="-2" pref="20" max="-2" attributes="0"/>
-                          <Component id="Horapedido2" min="-2" pref="20" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="Horapedido3" min="-2" pref="20" max="-2" attributes="0"/>
-                          <Component id="Tiempodemora3" min="-2" pref="20" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="Tiempodemora4" min="-2" pref="20" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="Horapedido5" min="-2" pref="20" max="-2" attributes="0"/>
-                          <Component id="Tiempodemora5" min="-2" pref="20" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="Cliente1" min="-2" pref="20" max="-2" attributes="0"/>
                           <Component id="Pedido1" min="-2" pref="20" max="-2" attributes="0"/>
@@ -126,7 +109,43 @@
                           <Component id="Cliente2" min="-2" pref="20" max="-2" attributes="0"/>
                           <Component id="Pedido2" min="-2" pref="20" max="-2" attributes="0"/>
                       </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="Horapedido1" alignment="0" pref="20" max="32767" attributes="0"/>
+                          <Component id="Tiempodemora1" alignment="0" pref="20" max="32767" attributes="0"/>
+                          <Component id="jButtonEntregado1" alignment="0" pref="0" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="Tiempodemora2" min="-2" pref="20" max="-2" attributes="0"/>
+                          <Component id="Horapedido2" min="-2" pref="20" max="-2" attributes="0"/>
+                          <Component id="jButtonEntregado2" min="-2" pref="20" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
+              <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="Horapedido4" min="-2" pref="20" max="-2" attributes="0"/>
+                          <Component id="Tiempodemora3" min="-2" pref="20" max="-2" attributes="0"/>
+                          <Component id="jButtonEntregado3" min="-2" pref="20" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="Horapedido3" min="-2" pref="20" max="-2" attributes="0"/>
+                          <Component id="Tiempodemora4" min="-2" pref="20" max="-2" attributes="0"/>
+                          <Component id="jButtonEntregado4" min="-2" pref="20" max="-2" attributes="0"/>
+                      </Group>
                       <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="Tiempodemora5" min="-2" pref="20" max="-2" attributes="0"/>
+                          <Component id="Horapedido5" min="-2" pref="20" max="-2" attributes="0"/>
+                          <Component id="jButtonEntregado5" min="-2" pref="20" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="Cliente3" min="-2" pref="20" max="-2" attributes="0"/>
                           <Component id="Pedido3" min="-2" pref="20" max="-2" attributes="0"/>
@@ -135,16 +154,15 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="Pedido4" min="-2" pref="20" max="-2" attributes="0"/>
                           <Component id="Cliente4" alignment="0" min="-2" pref="20" max="-2" attributes="0"/>
-                          <Component id="Horapedido4" alignment="0" min="-2" pref="20" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="Cliente5" min="-2" pref="20" max="-2" attributes="0"/>
                           <Component id="Pedido5" min="-2" pref="20" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="231" max="-2" attributes="0"/>
                   </Group>
               </Group>
+              <EmptySpace pref="228" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -160,18 +178,20 @@
     </Component>
     <Component class="javax.swing.JLabel" name="textocliente">
       <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
         <Property name="text" type="java.lang.String" value="      Cliente"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="textohorapedido">
       <Properties>
-        <Property name="text" type="java.lang.String" value="   Hora Pedido "/>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="Hora pedido"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="textotiempodemora">
       <Properties>
-        <Property name="horizontalAlignment" type="int" value="2"/>
-        <Property name="text" type="java.lang.String" value="    Tiempo Demora"/>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="Demora"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="textoPedido">
@@ -359,6 +379,46 @@
           </Border>
         </Property>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButtonEntregado1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Entregado"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonEntregado1ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButtonEntregado2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Entregado"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ClickEnEntregado2"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButtonEntregado3">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Entregado"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ClickEnEntregado3"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButtonEntregado4">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Entregado"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ClickEnEntregado4"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButtonEntregado5">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Entregado"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ClickEnEntregado5"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>
