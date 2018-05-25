@@ -23,14 +23,15 @@ public class GuiPantallaPedido extends javax.swing.JFrame {
         configurarHora();
     }
 
-     private void configurarHora(){
-         Calendar cal = Calendar.getInstance();
-         int horaActual = cal.get(Calendar.HOUR_OF_DAY);
-         int minutosActual = cal.get(Calendar.MINUTE);
-         
-         variableHora.setText(String.valueOf(horaActual));
-         VariableMinuto.setText(String.valueOf(minutosActual));
-     } 
+    private void configurarHora() {
+        Calendar cal = Calendar.getInstance();
+        int horaActual = cal.get(Calendar.HOUR_OF_DAY);
+        int minutosActual = cal.get(Calendar.MINUTE);
+
+        variableHora.setText(String.valueOf(horaActual));
+        VariableMinuto.setText(String.valueOf(minutosActual));
+    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -217,7 +218,7 @@ public class GuiPantallaPedido extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabelTexMinutos)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(variableErrorDemora, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(variableErrorDemora, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(variableHora, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -332,35 +333,36 @@ public class GuiPantallaPedido extends javax.swing.JFrame {
         Pizza pizzaSeleccionada = new Pizza(tamanio, tipo, variedad);
         try {
             int cantidad = Integer.valueOf(VariableCantidadPizzaIngresadas.getText());
-            Integer demora = Integer.valueOf(variableDemora.getText());
-            Pedido pedidoRealizado = new Pedido(VariableCliente.getText(), variableHora.getText() + ":" + VariableMinuto.getText(), demora, pizzaSeleccionada, cantidad);
- 
-            String precioTotal = String.valueOf(pedidoRealizado.getPrecio());
-            
-            String nombreIngresado = VariableCliente.getText();
-            nombreIngresado = nombreIngresado.trim();
-            if (nombreIngresado.isEmpty()){
-                variableErrorCliente.setText("Ingrese un nombre");
-            } else {
-                ticket.jLabelNombreCliente.setText("Cliente: " + VariableCliente.getText());
-                ticket.jLabelHoraPedido.setText("Hora pedido: " + variableHora.getText() + ":" + VariableMinuto.getText());
-                ticket.jLabelHoraDemora.setText("Demora: " + variableDemora.getText());
-                ticket.jLabelTotalFinal.setText("Costo total: " + precioTotal);
-                ticket.jLabelObservacion.setText("Observacion: " + variableObservacion.getText());
-                
-                pedidoRealizado.setCliente(nombreIngresado);
-                pantallaInicial.agregarPedido(pedidoRealizado);
-                
-                ticket.setVisible(true);
-                dispose();
+            try {
+                Integer demora = Integer.valueOf(variableDemora.getText());
+                Pedido pedidoRealizado = new Pedido(VariableCliente.getText(), variableHora.getText() + ":" + VariableMinuto.getText(), demora, pizzaSeleccionada, cantidad);
+                String precioTotal = String.valueOf(pedidoRealizado.getPrecio());
+                String nombreIngresado = VariableCliente.getText();
+                nombreIngresado = nombreIngresado.trim();
+                if (nombreIngresado.isEmpty()) {
+                    variableErrorCliente.setText("Ingrese un nombre");
+                } else {
+                    ticket.jLabelNombreCliente.setText("Cliente: " + VariableCliente.getText());
+                    ticket.jLabelHoraPedido.setText("Hora pedido: " + variableHora.getText() + ":" + VariableMinuto.getText());
+                    ticket.jLabelHoraDemora.setText("Demora: " + variableDemora.getText());
+                    ticket.jLabelTotalFinal.setText("Costo total: " + precioTotal);
+                    ticket.jLabelObservacion.setText("Observacion: " + variableObservacion.getText());
+
+                    pedidoRealizado.setCliente(nombreIngresado);
+                    pantallaInicial.agregarPedido(pedidoRealizado);
+
+                    ticket.setVisible(true);
+                    dispose();
+                }
+            } catch (Exception e) {
+                variableErrorDemora.setText("La demora debe ser un numero");
             }
-    
-            
+
         } catch (Exception e) {
             variableErrorDeIngresCantidadDePizza.setText("La cantidad debe ser un numero");
         }
-        
-        
+
+
     }//GEN-LAST:event_CalcularCosto
 
     private void PresiototalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PresiototalActionPerformed

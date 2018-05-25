@@ -102,7 +102,7 @@
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="jLabelTexMinutos" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="variableErrorDemora" min="-2" pref="230" max="-2" attributes="0"/>
+                              <Component id="variableErrorDemora" min="-2" pref="260" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
                               <Component id="variableHora" min="-2" pref="39" max="-2" attributes="0"/>

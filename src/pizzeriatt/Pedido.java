@@ -19,7 +19,7 @@ public class Pedido {
             throw new Error("ingrese el cliente");
         }
         if (cantidad < 1) {
-            throw new Error("cantidad");
+            throw new Error("cantidad no valida");
         }
 
         if (unaPizza == null) {
