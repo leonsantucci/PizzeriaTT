@@ -36,7 +36,13 @@
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="textoPedido" pref="258" max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
+                      <Component id="textohorapedido" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                          <Component id="Pedido1" max="32767" attributes="0"/>
                           <Component id="Pedido3" alignment="0" pref="237" max="32767" attributes="0"/>
                           <Component id="Pedido2" alignment="0" max="32767" attributes="0"/>
                           <Component id="Pedido4" alignment="0" max="32767" attributes="0"/>
@@ -48,17 +54,8 @@
                           <Component id="Horapedido4" alignment="1" max="32767" attributes="0"/>
                           <Component id="Horapedido3" alignment="1" max="32767" attributes="0"/>
                           <Component id="Horapedido2" max="32767" attributes="0"/>
+                          <Component id="Horapedido1" max="32767" attributes="0"/>
                       </Group>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="Pedido1" max="32767" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="Horapedido1" min="-2" pref="70" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <Component id="textoPedido" pref="242" max="32767" attributes="0"/>
-                      <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
-                      <Component id="textohorapedido" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
@@ -70,7 +67,7 @@
                   <Component id="Tiempodemora5" pref="90" max="32767" attributes="0"/>
                   <Component id="textotiempodemora" alignment="1" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
           </Group>
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
