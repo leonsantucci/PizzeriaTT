@@ -101,6 +101,8 @@
                               <Component id="variableDemora" min="-2" pref="39" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="jLabelTexMinutos" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="variableErrorDemora" min="-2" pref="230" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
                               <Component id="variableHora" min="-2" pref="39" max="-2" attributes="0"/>
@@ -108,10 +110,6 @@
                               <Component id="Puntos" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="VariableMinuto" min="-2" pref="42" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="Flechita" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="variableErrorhora" min="-2" pref="230" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -127,72 +125,74 @@
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                                      <Component id="TextCliente" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="VariableCliente" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
-                                      <Component id="Flechita2" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                                      <Component id="variableErrorCliente" min="-2" pref="45" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="TextHora" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="variableHora" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="VariableMinuto" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="Puntos" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="Flechita" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Component id="variableErrorhora" min="-2" pref="49" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                      <Component id="TextCliente" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="VariableCliente" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                      <Component id="Flechita2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                      <Component id="variableErrorCliente" min="-2" pref="45" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="TextHora" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="variableHora" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="VariableMinuto" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Puntos" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="textDemora" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="variableDemora" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabelTexMinutos" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="ImagenYTextTipoDePizza" alignment="3" min="-2" pref="69" max="-2" attributes="0"/>
-                          <Component id="ImagenYTextorciones" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="ImagenYtextVariedad" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <Group type="103" groupAlignment="1" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
-                              <Component id="TextObservacion" min="-2" pref="25" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="ImagenYTextTipoDePizza" alignment="3" min="-2" pref="69" max="-2" attributes="0"/>
+                                  <Component id="ImagenYTextorciones" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="ImagenYtextVariedad" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="variableObservacion" min="-2" pref="34" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
-                              <Component id="TextCantidadDePizza" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="VariableCantidadPizzaIngresadas" min="-2" pref="33" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="TextObservacion" min="-2" pref="25" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="variableObservacion" min="-2" pref="34" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="TextCantidadDePizza" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="VariableCantidadPizzaIngresadas" min="-2" pref="33" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="VariedadPorciones" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="VariedadPizza" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="VariedadTipoDePizza" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="variableErrorDeIngresCantidadDePizza" min="-2" pref="29" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="43" max="32767" attributes="0"/>
+                      <Component id="VariableEjecutar" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Component id="variableErrorDemora" min="-2" pref="49" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
               </Group>
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="VariedadPorciones" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="VariedadPizza" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="VariedadTipoDePizza" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Component id="variableErrorDeIngresCantidadDePizza" min="-2" pref="29" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace pref="46" max="32767" attributes="0"/>
-              <Component id="VariableEjecutar" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -398,11 +398,6 @@
         <Property name="text" type="java.lang.String" value="-------------------------------------&gt;"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="Flechita">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="-----------------------------------&gt;"/>
-      </Properties>
-    </Component>
     <Component class="javax.swing.JLabel" name="TextObservacion">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -433,7 +428,7 @@
         </Property>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="variableErrorhora">
+    <Component class="javax.swing.JLabel" name="variableErrorDemora">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="18" style="0"/>
