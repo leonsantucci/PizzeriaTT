@@ -129,8 +129,8 @@ public class GuiPantallaTiket extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
                 .addComponent(jLabelTextoPedido)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabelTotal1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 19, Short.MAX_VALUE)
+                .addComponent(jLabelTotal1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 79, Short.MAX_VALUE)
                 .addComponent(jLabelTotalFinal, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -222,7 +222,7 @@ public class GuiPantallaTiket extends javax.swing.JFrame {
     public javax.swing.JLabel jLabelNombreCliente;
     public javax.swing.JLabel jLabelObservacion;
     private javax.swing.JLabel jLabelTextoPedido;
-    private javax.swing.JLabel jLabelTotal1;
+    public javax.swing.JLabel jLabelTotal1;
     public javax.swing.JLabel jLabelTotalFinal;
     // End of variables declaration//GEN-END:variables
 }

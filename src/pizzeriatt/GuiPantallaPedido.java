@@ -120,6 +120,8 @@ public class GuiPantallaPedido extends javax.swing.JFrame {
         ImagenYTextTipoDePizza.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pizzeriatt/imagenes/piedra.jpg"))); // NOI18N
         ImagenYTextTipoDePizza.setText("Tipo de pizza ");
 
+        VariableCantidadPizzaIngresadas.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+
         VariableMinuto.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         VariableMinuto.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         VariableMinuto.setText("00");
@@ -149,8 +151,7 @@ public class GuiPantallaPedido extends javax.swing.JFrame {
         TextObservacion.setText("Observacion");
 
         variableObservacion.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        variableObservacion.setForeground(new java.awt.Color(153, 0, 0));
-        variableObservacion.setHorizontalAlignment(javax.swing.JTextField.TRAILING);
+        variableObservacion.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         variableObservacion.setText("                                       ");
 
         variableErrorCliente.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -347,6 +348,7 @@ public class GuiPantallaPedido extends javax.swing.JFrame {
                     ticket.jLabelHoraDemora.setText("Demora: " + variableDemora.getText());
                     ticket.jLabelTotalFinal.setText("Costo total: " + precioTotal);
                     ticket.jLabelObservacion.setText("Observacion: " + variableObservacion.getText());
+                    ticket.jLabelTotal1.setText(pedidoRealizado.getCantidad() + " x " + pedidoRealizado.getUnaPizza().getVariedadPizza().getNombre() + " = " + pedidoRealizado.getPrecio());
 
                     pedidoRealizado.setCliente(nombreIngresado);
                     pantallaInicial.agregarPedido(pedidoRealizado);
