@@ -63,7 +63,6 @@ public class GuiPantallaPedido extends javax.swing.JFrame {
         VariedadTipoDePizza = new javax.swing.JComboBox<>();
         variableErrorDeIngresCantidadDePizza = new javax.swing.JLabel();
         TextCantidadDePizza = new javax.swing.JLabel();
-        Flechita2 = new javax.swing.JLabel();
         TextObservacion = new javax.swing.JLabel();
         variableObservacion = new javax.swing.JTextField();
         variableErrorCliente = new javax.swing.JLabel();
@@ -145,8 +144,6 @@ public class GuiPantallaPedido extends javax.swing.JFrame {
         TextCantidadDePizza.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         TextCantidadDePizza.setText("Cantidad de Pizza");
 
-        Flechita2.setText("------------------------------------->");
-
         TextObservacion.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         TextObservacion.setText("Observacion");
 
@@ -211,8 +208,6 @@ public class GuiPantallaPedido extends javax.swing.JFrame {
                                 .addGap(4, 4, 4)
                                 .addComponent(VariableCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Flechita2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(variableErrorCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(variableDemora, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -229,7 +224,7 @@ public class GuiPantallaPedido extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(419, 419, 419)
                         .addComponent(VariableEjecutar)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(13, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -237,8 +232,7 @@ public class GuiPantallaPedido extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(TextCliente)
-                        .addComponent(VariableCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(Flechita2))
+                        .addComponent(VariableCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(27, 27, 27)
                         .addComponent(variableErrorCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -412,7 +406,6 @@ public class GuiPantallaPedido extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel Flechita2;
     private javax.swing.JLabel ImagenYTextTipoDePizza;
     private javax.swing.JLabel ImagenYTextorciones;
     private javax.swing.JLabel ImagenYtextVariedad;
