@@ -339,20 +339,24 @@ public class GuiPantallaInicial extends javax.swing.JFrame {
         TimerTask task = new TimerTask() {
             @Override
             public void run() {
-
                 for (int i = 0; i < pedidos.size(); i++) {
                     Pedido pedidoActual = pedidos.get(i);
                     if (pedidoActual.estaAtrasado(new Date())) {
                         if (i == 0) {
                             Tiempodemora1.setForeground(Color.red);
+                            java.awt.Toolkit.getDefaultToolkit().beep();
                         } else if (i == 1) {
                             Tiempodemora2.setForeground(Color.red);
+                            java.awt.Toolkit.getDefaultToolkit().beep();
                         } else if (i == 2) {
                             Tiempodemora3.setForeground(Color.red);
+                            java.awt.Toolkit.getDefaultToolkit().beep();
                         } else if (i == 3) {
                             Tiempodemora4.setForeground(Color.red);
+                            java.awt.Toolkit.getDefaultToolkit().beep();
                         } else if (i == 4) {
                             Tiempodemora5.setForeground(Color.red);
+                            java.awt.Toolkit.getDefaultToolkit().beep();
                         }
                     }
                 }
