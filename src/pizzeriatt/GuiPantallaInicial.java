@@ -23,6 +23,7 @@ public class GuiPantallaInicial extends javax.swing.JFrame {
     public GuiPantallaInicial() {
         initComponents();
         iniciarTimer();
+        this.getContentPane().setBackground(Color.getHSBColor(222, 184, 135));
     }
 
     /**
@@ -288,7 +289,7 @@ public class GuiPantallaInicial extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(Cliente5, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(Pedido5, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(228, Short.MAX_VALUE))
+                .addContainerGap(34, Short.MAX_VALUE))
         );
 
         pack();
