@@ -5,6 +5,9 @@
  */
 package pizzeriatt;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 /**
  *
  * @author User
@@ -19,6 +22,7 @@ public class GuiTablaInicial extends javax.swing.JFrame {
     public GuiTablaInicial() {
         initComponents();
         configurarTabla();
+        configurarTimer();
     }
 
     /**
@@ -83,7 +87,7 @@ public class GuiTablaInicial extends javax.swing.JFrame {
         unPedido.setPantallaListado(this);
         unPedido.setVisible(true);
     }//GEN-LAST:event_ClickEnCrearPedido
-    
+
     public void agregarPedido(Pedido pedidoRealizado) {
         modelo.agregarPedido(pedidoRealizado);
     }
@@ -132,5 +136,18 @@ public class GuiTablaInicial extends javax.swing.JFrame {
     private void configurarTabla() {
         modelo = new Modelo();
         jTable1.setModel(modelo);
+        ResaltadorDePedidosVencidos resaltador = new ResaltadorDePedidosVencidos(modelo);
+        jTable1.setDefaultRenderer(String.class, resaltador);
+    }
+
+    private void configurarTimer() {
+        TimerTask task = new TimerTask() {
+            @Override
+            public void run() {
+                jTable1.repaint();
+            }
+        };
+        Timer timer = new Timer();
+        timer.schedule(task, 0, 1000);
     }
 }

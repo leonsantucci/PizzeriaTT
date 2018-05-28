@@ -17,12 +17,12 @@ import javax.swing.table.TableModel;
  */
 public class Modelo implements TableModel {
 
-    private List<Pedido> unPedido = new ArrayList<Pedido>();
+    private List<Pedido> listaPedidos = new ArrayList<Pedido>();
     private List<TableModelListener> listeners = new ArrayList<TableModelListener>();
 
     @Override
     public int getRowCount() {
-        return this.unPedido.size();
+        return this.listaPedidos.size();
     }
 
     @Override
@@ -52,12 +52,12 @@ public class Modelo implements TableModel {
 
     @Override
     public boolean isCellEditable(int rowIndex, int columnIndex) {
-        return false;
+        return true;
     }
 
     @Override
     public Object getValueAt(int rowIndex, int columnIndex) {
-        Pedido unPedido = this.unPedido.get(rowIndex);
+        Pedido unPedido = this.listaPedidos.get(rowIndex);
         String[] partes = unPedido.getHoraPedido().split(":");
         String hora = partes[0];
         String minutos = partes[1];
@@ -93,9 +93,9 @@ public class Modelo implements TableModel {
     }
 
     public void agregarPedido(Pedido unPedido) {
-        this.unPedido.add(unPedido);
+        this.listaPedidos.add(unPedido);
         
-        TableModelEvent evento = new TableModelEvent(this, this.unPedido.size() - 1, this.unPedido.size() - 1,
+        TableModelEvent evento = new TableModelEvent(this, this.listaPedidos.size() - 1, this.listaPedidos.size() - 1,
                 TableModelEvent.ALL_COLUMNS, TableModelEvent.INSERT);
        
         for (TableModelListener listener : this.listeners) {
@@ -105,7 +105,9 @@ public class Modelo implements TableModel {
     }
 
     public List<Pedido> getPedidos() {
-        return this.unPedido;
+        return this.listaPedidos;
     }
+    
+    
 
 }
