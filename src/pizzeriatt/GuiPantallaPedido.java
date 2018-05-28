@@ -13,7 +13,7 @@ import pizzeriatt.Variedad;
  */
 public class GuiPantallaPedido extends javax.swing.JFrame {
 
-    private GuiPantallaInicial pantallaInicial;
+    private GuiTablaInicial pantallaInicial;
 
     /**
      * Creates new form Pizzeriaa
@@ -435,7 +435,7 @@ public class GuiPantallaPedido extends javax.swing.JFrame {
     private javax.swing.JTextField variableObservacion;
     // End of variables declaration//GEN-END:variables
 
-    public void setPantallaListado(GuiPantallaInicial pantallaInicial) {
+    public void setPantallaListado(GuiTablaInicial pantallaInicial) {
         this.pantallaInicial = pantallaInicial;
     }
 }

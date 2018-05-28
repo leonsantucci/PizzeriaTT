@@ -297,7 +297,7 @@ public class GuiPantallaInicial extends javax.swing.JFrame {
 
     private void generarPedido(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_generarPedido
         GuiPantallaPedido unPedido = new GuiPantallaPedido();
-        unPedido.setPantallaListado(this);
+//        unPedido.setPantallaListado(this);
         unPedido.setVisible(true);
     }//GEN-LAST:event_generarPedido
 
