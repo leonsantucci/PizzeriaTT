@@ -52,7 +52,7 @@ public class Modelo implements TableModel {
 
     @Override
     public boolean isCellEditable(int rowIndex, int columnIndex) {
-        return true;
+        return false;
     }
 
     @Override
