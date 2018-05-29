@@ -14,6 +14,7 @@ import pizzeriatt.Variedad;
 public class GuiPantallaPedido extends javax.swing.JFrame {
 
     private GuiTablaInicial pantallaInicial;
+    private int numeroPedido;
 
     /**
      * Creates new form Pizzeriaa

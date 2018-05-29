@@ -5,6 +5,7 @@
  */
 package pizzeriatt;
 
+import java.awt.Color;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -23,6 +24,7 @@ public class GuiTablaInicial extends javax.swing.JFrame {
         initComponents();
         configurarTabla();
         configurarTimer();
+        this.getContentPane().setBackground(new Color(50, 100, 180));
     }
 
     /**
@@ -56,8 +58,8 @@ public class GuiTablaInicial extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        jButtonCrearPedido.setBackground(new java.awt.Color(102, 102, 102));
-        jButtonCrearPedido.setForeground(new java.awt.Color(255, 204, 51));
+        jButtonCrearPedido.setBackground(new java.awt.Color(255, 255, 255));
+        jButtonCrearPedido.setForeground(new java.awt.Color(51, 51, 255));
         jButtonCrearPedido.setText("Crear pedido");
         jButtonCrearPedido.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -65,7 +67,7 @@ public class GuiTablaInicial extends javax.swing.JFrame {
             }
         });
 
-        jButtonPedidoEntregado.setBackground(new java.awt.Color(102, 102, 102));
+        jButtonPedidoEntregado.setBackground(new java.awt.Color(255, 255, 255));
         jButtonPedidoEntregado.setForeground(new java.awt.Color(204, 102, 0));
         jButtonPedidoEntregado.setText("Pedido entregado");
         jButtonPedidoEntregado.addActionListener(new java.awt.event.ActionListener() {
@@ -74,8 +76,11 @@ public class GuiTablaInicial extends javax.swing.JFrame {
             }
         });
 
+        jTextFieldNumeroPeddo.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextFieldNumeroPeddo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        jLabelNumeroPedido.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabelNumeroPedido.setForeground(new java.awt.Color(255, 255, 255));
         jLabelNumeroPedido.setText("Ingrese Numero Pedido");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -91,18 +96,19 @@ public class GuiTablaInicial extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTextFieldNumeroPeddo, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabelNumeroPedido, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabelNumeroPedido)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(11, 11, 11)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButtonCrearPedido)
-                    .addComponent(jButtonPedidoEntregado)
-                    .addComponent(jTextFieldNumeroPeddo, javax.swing.GroupLayout.DEFAULT_SIZE, 25, Short.MAX_VALUE)
-                    .addComponent(jLabelNumeroPedido, javax.swing.GroupLayout.DEFAULT_SIZE, 25, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jTextFieldNumeroPeddo, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jButtonCrearPedido)
+                        .addComponent(jButtonPedidoEntregado)
+                        .addComponent(jLabelNumeroPedido, javax.swing.GroupLayout.DEFAULT_SIZE, 25, Short.MAX_VALUE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE))
         );

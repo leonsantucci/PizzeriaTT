@@ -90,6 +90,10 @@ public class Pedido {
     public Pizza getUnaPizza() {
         return unaPizza;
     }
+
+    public void setNumeroPedido(int numeroPedido) {
+        this.numeroPedido = numeroPedido;
+    }
     
     
     
