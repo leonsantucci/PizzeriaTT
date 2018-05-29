@@ -25,7 +25,6 @@ public class GuiPantallaTiket extends javax.swing.JFrame {
      */
     public GuiPantallaTiket() {
         initComponents();
-        this.getContentPane().setBackground(Color.getHSBColor(240, 248, 255));
     }
 
     /**

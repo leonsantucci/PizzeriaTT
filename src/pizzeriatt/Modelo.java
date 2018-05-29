@@ -27,19 +27,21 @@ public class Modelo implements TableModel {
 
     @Override
     public int getColumnCount() {
-        return 4;
+        return 5;
     }
 
     @Override
     public String getColumnName(int columnIndex) {
         String nombreColumna = "";
         if (columnIndex == 0) {
-            nombreColumna = "Cliente";
+            nombreColumna = "Numero Pedido";
         } else if (columnIndex == 1) {
-            nombreColumna = "Pedido";
+            nombreColumna = "Cliente";
         } else if (columnIndex == 2) {
-            nombreColumna = "Hora pedido";
+            nombreColumna = "Pedido";
         } else if (columnIndex == 3) {
+            nombreColumna = "Hora Pedido";
+        } else if (columnIndex == 4) {
             nombreColumna = "Demora";
         }
         return nombreColumna;
@@ -62,16 +64,19 @@ public class Modelo implements TableModel {
         String hora = partes[0];
         String minutos = partes[1];
         String demora = String.valueOf(unPedido.getTiempoDemora());
+        String numeroPedido = String.valueOf(unPedido.getNumeroPedido());
         String valor = "";
         if (columnIndex == 0) {
-            valor = unPedido.getCliente();
+            valor = numeroPedido;
         } else if (columnIndex == 1) {
+            valor = unPedido.getCliente();
+        } else if (columnIndex == 2) {
             valor = unPedido.getUnaPizza().getVariedadPizza().getNombre() + ", "
                     + unPedido.getUnaPizza().getTamanio() + ", " + unPedido.getUnaPizza().getTipo()
                     + ", cantidad " + unPedido.getCantidad();
-        } else if (columnIndex == 2) {
-            valor = hora + ":" + minutos;
         } else if (columnIndex == 3) {
+            valor = hora + ":" + minutos;
+        } else if (columnIndex == 4) {
             valor = demora;
         }
         return valor;
@@ -94,10 +99,10 @@ public class Modelo implements TableModel {
 
     public void agregarPedido(Pedido unPedido) {
         this.listaPedidos.add(unPedido);
-        
+
         TableModelEvent evento = new TableModelEvent(this, this.listaPedidos.size() - 1, this.listaPedidos.size() - 1,
                 TableModelEvent.ALL_COLUMNS, TableModelEvent.INSERT);
-       
+
         for (TableModelListener listener : this.listeners) {
             listener.tableChanged(evento);
         }
@@ -107,7 +112,5 @@ public class Modelo implements TableModel {
     public List<Pedido> getPedidos() {
         return this.listaPedidos;
     }
-    
-    
 
 }
