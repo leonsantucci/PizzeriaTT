@@ -79,7 +79,6 @@ public class Modelo implements TableModel {
         } else if (columnIndex == 4) {
             valor = demora;
         }
-        np++;
         return valor;
     }
 

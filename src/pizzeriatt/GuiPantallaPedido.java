@@ -14,7 +14,7 @@ import pizzeriatt.Variedad;
 public class GuiPantallaPedido extends javax.swing.JFrame {
 
     private GuiTablaInicial pantallaInicial;
-    private int numeroPedido;
+    private static int numeroPedido = 1;
 
     /**
      * Creates new form Pizzeriaa
@@ -344,7 +344,8 @@ public class GuiPantallaPedido extends javax.swing.JFrame {
                     ticket.jLabelTotalFinal.setText("Costo total: " + precioTotal);
                     ticket.jLabelObservacion.setText("Observacion: " + variableObservacion.getText());
                     ticket.jLabelTotal1.setText(pedidoRealizado.getCantidad() + " x " + pedidoRealizado.getUnaPizza().getVariedadPizza().getNombre() + " = " + pedidoRealizado.getPrecio());
-
+                   pedidoRealizado.setNumeroPedido(numeroPedido);
+                   numeroPedido++;
                     pedidoRealizado.setCliente(nombreIngresado);
                     pantallaInicial.agregarPedido(pedidoRealizado);
 
