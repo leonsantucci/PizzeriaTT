@@ -113,4 +113,29 @@ public class Modelo implements TableModel {
         return this.listaPedidos;
     }
 
+    public void buscarPedidoYBorrar(int numeroPedido) throws Exception {
+        int posicionBuscada = -1;
+        for (int i = 0; i < listaPedidos.size(); i++) {
+            Pedido pedido = listaPedidos.get(i);
+            if (pedido.getNumeroPedido() == numeroPedido) {
+                posicionBuscada = i;
+            }
+        }
+        if (posicionBuscada != -1) {
+            
+            listaPedidos.remove(posicionBuscada);
+        
+            TableModelEvent evento = new TableModelEvent(this, posicionBuscada, posicionBuscada,
+                TableModelEvent.ALL_COLUMNS, TableModelEvent.DELETE);
+
+            for (TableModelListener listener : this.listeners) {
+             listener.tableChanged(evento);
+             }
+            
+            
+            
+        } else {
+            throw new Exception();        }
+    }
+
 }

@@ -123,7 +123,14 @@ public class GuiTablaInicial extends javax.swing.JFrame {
     }//GEN-LAST:event_ClickEnCrearPedido
 
     private void ClickEnEntregarPedido(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ClickEnEntregarPedido
-        
+      jLabelNumeroPedido.setForeground(Color.white);
+        try {
+            int numeroPedido = Integer.valueOf(jTextFieldNumeroPeddo.getText());
+        modelo.buscarPedidoYBorrar(numeroPedido);
+        } catch (Exception e) {
+            jLabelNumeroPedido.setForeground(Color.red);
+        }
+       
     }//GEN-LAST:event_ClickEnEntregarPedido
 
     public void agregarPedido(Pedido pedidoRealizado) {
