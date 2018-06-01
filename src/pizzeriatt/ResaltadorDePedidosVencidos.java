@@ -31,6 +31,7 @@ public class ResaltadorDePedidosVencidos implements TableCellRenderer {
         Pedido pedido = modelo.getPedidos().get(row);
         if (pedido.estaAtrasado(new Date())) {
             c.setBackground(Color.red);
+            java.awt.Toolkit.getDefaultToolkit().beep();
         } else {
             c.setBackground(Color.white);
         }
