@@ -2,6 +2,7 @@ package pizzeriatt;
 
 import java.awt.event.ActionEvent;
 import java.util.Calendar;
+import java.util.List;
 import pizzeriatt.GuiPantallaTiket;
 import pizzeriatt.Pizza;
 import pizzeriatt.Tipo;
@@ -15,6 +16,7 @@ public class GuiPantallaPedido extends javax.swing.JFrame {
 
     private GuiTablaInicial pantallaInicial;
     private static int numeroPedido = 1;
+    private List<Variedad> listaDeVariedades;
 
     /**
      * Creates new form Pizzeriaa
@@ -22,6 +24,7 @@ public class GuiPantallaPedido extends javax.swing.JFrame {
     public GuiPantallaPedido() {
         initComponents();
         configurarHora();
+        leerVariedades();
     }
 
     private void configurarHora() {
@@ -130,7 +133,6 @@ public class GuiPantallaPedido extends javax.swing.JFrame {
         Puntos.setText(":");
 
         VariedadPizza.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        VariedadPizza.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Muzarella", "jamon y morron", "fugazeta", "cuatro quesos" }));
 
         VariedadPorciones.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         VariedadPorciones.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "8", "10", "12" }));
@@ -296,17 +298,11 @@ public class GuiPantallaPedido extends javax.swing.JFrame {
 
     private void CalcularCosto(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CalcularCosto
         GuiPantallaTiket ticket = new GuiPantallaTiket();
-        Variedad variedad = null;
+        
+        
         int variedadSeleccionada = VariedadPizza.getSelectedIndex();
-        if (variedadSeleccionada == 0) {
-            variedad = new Variedad("mozarella", 70);
-        } else if (variedadSeleccionada == 1) {
-            variedad = new Variedad("jamor y morron", 70);
-        } else if (variedadSeleccionada == 2) {
-            variedad = new Variedad("fugazeta", 60);
-        } else if (variedadSeleccionada == 3) {
-            variedad = new Variedad("cuatro quesos", 75);
-        }
+        Variedad variedad = this.listaDeVariedades.get(variedadSeleccionada);
+        
         int tamanio = 0;
         int tamanioSeleccionado = VariedadPorciones.getSelectedIndex();
         if (tamanioSeleccionado == 0) {
@@ -439,5 +435,15 @@ public class GuiPantallaPedido extends javax.swing.JFrame {
 
     public void setPantallaListado(GuiTablaInicial pantallaInicial) {
         this.pantallaInicial = pantallaInicial;
+    }
+
+    private void leerVariedades() {
+        AdministradorDeVariedades unAdmin = new AdministradorDeVariedades();
+        this.listaDeVariedades = unAdmin.obtener();
+        
+        for(Variedad v : this.listaDeVariedades) {
+            VariedadPizza.addItem(v.getNombre());
+        }
+        
     }
 }

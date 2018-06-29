@@ -5,19 +5,31 @@
  */
 package pizzeriatt;
 
-/**
- *
- * @author ITUOM
- */
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Variedad {
     
+    @Column
     private String nombre;
+    @Column
     private double precio;
+    @Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
+    private Long id;
 
+    public Variedad() {
+    }
+    
     public Variedad(String nombre, double precio) {
         this.nombre = nombre;
         this.precio = precio;
     }
+    
 
    
 
@@ -27,6 +39,14 @@ public class Variedad {
 
     public String getNombre() {
         return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setPrecio(double precio) {
+        this.precio = precio;
     }
     
     

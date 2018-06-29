@@ -6,6 +6,7 @@
 package pizzeriatt;
 
 import java.awt.Color;
+import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -117,6 +118,7 @@ public class GuiTablaInicial extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void ClickEnCrearPedido(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ClickEnCrearPedido
+        
         GuiPantallaPedido unPedido = new GuiPantallaPedido();
         unPedido.setPantallaListado(this);
         unPedido.setVisible(true);
