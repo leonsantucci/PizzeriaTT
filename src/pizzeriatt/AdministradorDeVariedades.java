@@ -13,4 +13,20 @@ public class AdministradorDeVariedades {
         session.close();
         return Listado;
     }
+
+    public void guardar(Variedad v) {
+        Session session = NewHibernateUtil.getSessionFactory().openSession();
+        session.beginTransaction();
+
+        session.merge(v);
+        session.getTransaction().commit();
+    }
+
+    public void borrar(Variedad v) {
+        Session session = NewHibernateUtil.getSessionFactory().openSession();
+        session.beginTransaction();
+
+        session.delete(v);
+        session.getTransaction().commit();
+    }
 }

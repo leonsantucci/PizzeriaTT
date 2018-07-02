@@ -10,6 +10,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.swing.JTextField;
 
 @Entity
 public class Variedad {
@@ -29,11 +30,8 @@ public class Variedad {
         this.nombre = nombre;
         this.precio = precio;
     }
-    
 
-   
-
-    public double getPrecio() {
+      public double getPrecio() {
         return precio;
     }
 

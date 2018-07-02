@@ -43,6 +43,7 @@ public class GuiTablaInicial extends javax.swing.JFrame {
         jButtonPedidoEntregado = new javax.swing.JButton();
         jTextFieldNumeroPeddo = new javax.swing.JTextField();
         jLabelNumeroPedido = new javax.swing.JLabel();
+        jButtonAdministrarVariedad = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -84,11 +85,18 @@ public class GuiTablaInicial extends javax.swing.JFrame {
         jLabelNumeroPedido.setForeground(new java.awt.Color(255, 255, 255));
         jLabelNumeroPedido.setText("Ingrese Numero Pedido");
 
+        jButtonAdministrarVariedad.setText("Administrar Variedad");
+        jButtonAdministrarVariedad.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAdministrarVariedadActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 504, Short.MAX_VALUE)
+            .addComponent(jScrollPane1)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jButtonCrearPedido)
@@ -98,6 +106,8 @@ public class GuiTablaInicial extends javax.swing.JFrame {
                 .addComponent(jTextFieldNumeroPeddo, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabelNumeroPedido)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButtonAdministrarVariedad)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -109,7 +119,8 @@ public class GuiTablaInicial extends javax.swing.JFrame {
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jButtonCrearPedido)
                         .addComponent(jButtonPedidoEntregado)
-                        .addComponent(jLabelNumeroPedido, javax.swing.GroupLayout.DEFAULT_SIZE, 25, Short.MAX_VALUE)))
+                        .addComponent(jLabelNumeroPedido, javax.swing.GroupLayout.DEFAULT_SIZE, 25, Short.MAX_VALUE)
+                        .addComponent(jButtonAdministrarVariedad)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
@@ -134,6 +145,11 @@ public class GuiTablaInicial extends javax.swing.JFrame {
         }
        
     }//GEN-LAST:event_ClickEnEntregarPedido
+
+    private void jButtonAdministrarVariedadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAdministrarVariedadActionPerformed
+        GuiPantallaAdministrarVariedad unaPantalla = new GuiPantallaAdministrarVariedad();
+        unaPantalla.setVisible(true);
+    }//GEN-LAST:event_jButtonAdministrarVariedadActionPerformed
 
     public void agregarPedido(Pedido pedidoRealizado) {
         modelo.agregarPedido(pedidoRealizado);
@@ -175,6 +191,7 @@ public class GuiTablaInicial extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButtonAdministrarVariedad;
     private javax.swing.JButton jButtonCrearPedido;
     private javax.swing.JButton jButtonPedidoEntregado;
     private javax.swing.JLabel jLabelNumeroPedido;
