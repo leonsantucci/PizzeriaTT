@@ -14,5 +14,6 @@
    
     
     <mapping class="pizzeriatt.Variedad"/>
+    <mapping class="pizzeriatt.Pedido"/>
   </session-factory>
 </hibernate-configuration>

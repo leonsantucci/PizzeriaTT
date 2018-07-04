@@ -2,19 +2,38 @@ package pizzeriatt;
 
 import java.util.Calendar;
 import java.util.Date;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Transient;
 
+@Entity
 public class Pedido {
 
+    @Column
     private String cliente;
+    @Column
     private String horaPedido;
+    @Column
     private int tiempoDemora;
+    @Column
     private int numeroPedido;
+    @Column
     private double precio;
+    @Column
     private int cantidad;
+    @Transient
     private Pizza unaPizza;
+    @Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
+    private Long id;
 
+    public Pedido (){
+    }
+    
     public Pedido(String cliente, String horaPedido, int tiempoDemoraMinutos, Pizza unaPizza, int cantidad) {
-
         if (cliente.isEmpty()) {
             throw new Error("ingrese el cliente");
         }
@@ -31,10 +50,12 @@ public class Pedido {
         this.unaPizza = unaPizza;
         this.cantidad = cantidad;
         this.numeroPedido++;
+        
+        this.precio = unaPizza.getPrecioPedido() * cantidad;
     }
 
     public double getPrecio() {
-        return unaPizza.getPrecioPedido() * cantidad;
+        return this.precio;
     }
 
     public int getNumeroPedido() {

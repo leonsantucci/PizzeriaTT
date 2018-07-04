@@ -17,6 +17,7 @@ import java.util.TimerTask;
 public class GuiTablaInicial extends javax.swing.JFrame {
 
     private Modelo modelo;
+    private List<Pedido> listaPedidos;
 
     /**
      * Creates new form GuiTablaInicial
@@ -129,21 +130,21 @@ public class GuiTablaInicial extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void ClickEnCrearPedido(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ClickEnCrearPedido
-        
+
         GuiPantallaPedido unPedido = new GuiPantallaPedido();
         unPedido.setPantallaListado(this);
         unPedido.setVisible(true);
     }//GEN-LAST:event_ClickEnCrearPedido
 
     private void ClickEnEntregarPedido(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ClickEnEntregarPedido
-      jLabelNumeroPedido.setForeground(Color.white);
+        jLabelNumeroPedido.setForeground(Color.white);
         try {
             int numeroPedido = Integer.valueOf(jTextFieldNumeroPeddo.getText());
-        modelo.buscarPedidoYBorrar(numeroPedido);
+            modelo.buscarPedidoYBorrar(numeroPedido);
         } catch (Exception e) {
             jLabelNumeroPedido.setForeground(Color.red);
         }
-       
+
     }//GEN-LAST:event_ClickEnEntregarPedido
 
     private void jButtonAdministrarVariedadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAdministrarVariedadActionPerformed
@@ -205,6 +206,13 @@ public class GuiTablaInicial extends javax.swing.JFrame {
         jTable1.setModel(modelo);
         ResaltadorDePedidosVencidos resaltador = new ResaltadorDePedidosVencidos(modelo);
         jTable1.setDefaultRenderer(String.class, resaltador);
+        AdministradorDePedidos unAdmin = new AdministradorDePedidos();
+
+        List<Pedido> pedidos = unAdmin.obtener();
+        for (Pedido p : pedidos) {
+            modelo.agregarPedido(p);
+        }
+
     }
 
     private void configurarTimer() {

@@ -31,7 +31,7 @@ public class Variedad {
         this.precio = precio;
     }
 
-      public double getPrecio() {
+    public double getPrecio() {
         return precio;
     }
 

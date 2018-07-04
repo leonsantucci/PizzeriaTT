@@ -298,8 +298,7 @@ public class GuiPantallaPedido extends javax.swing.JFrame {
 
     private void CalcularCosto(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CalcularCosto
         GuiPantallaTiket ticket = new GuiPantallaTiket();
-        
-        
+                
         int variedadSeleccionada = VariedadPizza.getSelectedIndex();
         Variedad variedad = this.listaDeVariedades.get(variedadSeleccionada);
         
@@ -345,6 +344,8 @@ public class GuiPantallaPedido extends javax.swing.JFrame {
                     pedidoRealizado.setCliente(nombreIngresado);
                     pantallaInicial.agregarPedido(pedidoRealizado);
 
+                    AdministradorDePedidos unAdmin = new AdministradorDePedidos();
+                    unAdmin.guardar(pedidoRealizado);
                     ticket.setVisible(true);
                     dispose();
                 }

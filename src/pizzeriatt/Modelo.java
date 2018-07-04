@@ -38,7 +38,7 @@ public class Modelo implements TableModel {
         } else if (columnIndex == 1) {
             nombreColumna = "Cliente";
         } else if (columnIndex == 2) {
-            nombreColumna = "Pedido";
+            nombreColumna = "Precio Total";
         } else if (columnIndex == 3) {
             nombreColumna = "Hora Pedido";
         } else if (columnIndex == 4) {
@@ -66,14 +66,13 @@ public class Modelo implements TableModel {
         String demora = String.valueOf(unPedido.getTiempoDemora());
         String numeroPedido = String.valueOf(unPedido.getNumeroPedido());
         String valor = "";
+        String precioTotal = String.valueOf(unPedido.getPrecio());
         if (columnIndex == 0) {
             valor = numeroPedido;
         } else if (columnIndex == 1) {
             valor = unPedido.getCliente();
         } else if (columnIndex == 2) {
-            valor = unPedido.getUnaPizza().getVariedadPizza().getNombre() + ", "
-                    + unPedido.getUnaPizza().getTamanio() + ", " + unPedido.getUnaPizza().getTipo()
-                    + ", cantidad " + unPedido.getCantidad();
+            valor = precioTotal;
         } else if (columnIndex == 3) {
             valor = hora + ":" + minutos;
         } else if (columnIndex == 4) {
@@ -122,6 +121,10 @@ public class Modelo implements TableModel {
             }
         }
         if (posicionBuscada != -1) {
+            
+            Pedido pedidoABorrar = listaPedidos.get(posicionBuscada);
+            AdministradorDePedidos unAdmin = new AdministradorDePedidos();
+            unAdmin.borrar(pedidoABorrar);
             
             listaPedidos.remove(posicionBuscada);
         
