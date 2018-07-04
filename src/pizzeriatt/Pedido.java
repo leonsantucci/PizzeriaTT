@@ -19,8 +19,6 @@ public class Pedido {
     @Column
     private int tiempoDemora;
     @Column
-    private int numeroPedido;
-    @Column
     private double precio;
     @Column
     private int cantidad;
