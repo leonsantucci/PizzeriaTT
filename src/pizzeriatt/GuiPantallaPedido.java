@@ -342,10 +342,11 @@ public class GuiPantallaPedido extends javax.swing.JFrame {
                    pedidoRealizado.setNumeroPedido(numeroPedido);
                    numeroPedido++;
                     pedidoRealizado.setCliente(nombreIngresado);
-                    pantallaInicial.agregarPedido(pedidoRealizado);
+                    
 
                     AdministradorDePedidos unAdmin = new AdministradorDePedidos();
-                    unAdmin.guardar(pedidoRealizado);
+                    pedidoRealizado = unAdmin.guardar(pedidoRealizado);
+                    pantallaInicial.agregarPedido(pedidoRealizado);
                     ticket.setVisible(true);
                     dispose();
                 }

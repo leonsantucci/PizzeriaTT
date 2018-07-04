@@ -15,12 +15,14 @@ import org.hibernate.Session;
  */
 public class AdministradorDePedidos {
     
-    public void guardar(Pedido p) {
+    public Pedido guardar(Pedido p) {
         Session session = NewHibernateUtil.getSessionFactory().openSession();
         session.beginTransaction();
 
-        session.merge(p);
+        p = (Pedido) session.merge(p);
         session.getTransaction().commit();
+        
+        return p;
     }
     
     public List<Pedido> obtener() {

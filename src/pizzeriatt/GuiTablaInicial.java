@@ -17,7 +17,7 @@ import java.util.TimerTask;
 public class GuiTablaInicial extends javax.swing.JFrame {
 
     private Modelo modelo;
-    private List<Pedido> listaPedidos;
+ 
 
     /**
      * Creates new form GuiTablaInicial

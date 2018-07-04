@@ -115,6 +115,10 @@ public class Pedido {
     public void setNumeroPedido(int numeroPedido) {
         this.numeroPedido = numeroPedido;
     }
+
+    public Long getId() {
+        return id;
+    }
     
     
     

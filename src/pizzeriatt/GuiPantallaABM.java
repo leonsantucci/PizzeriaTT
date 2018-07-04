@@ -52,7 +52,7 @@ public class GuiPantallaABM extends javax.swing.JFrame {
             }
         });
 
-        jButtonCancelar.setText("Cncelar");
+        jButtonCancelar.setText("Cancelar");
         jButtonCancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ClckEnCancelar(evt);
@@ -76,7 +76,7 @@ public class GuiPantallaABM extends javax.swing.JFrame {
                     .addComponent(jTextFieldPrecioVariedad)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jButtonOK)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 96, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 90, Short.MAX_VALUE)
                         .addComponent(jButtonCancelar)))
                 .addContainerGap())
         );

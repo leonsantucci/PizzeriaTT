@@ -64,7 +64,7 @@ public class Modelo implements TableModel {
         String hora = partes[0];
         String minutos = partes[1];
         String demora = String.valueOf(unPedido.getTiempoDemora());
-        String numeroPedido = String.valueOf(unPedido.getNumeroPedido());
+        String numeroPedido = String.valueOf(unPedido.getId());
         String valor = "";
         String precioTotal = String.valueOf(unPedido.getPrecio());
         if (columnIndex == 0) {
@@ -116,7 +116,7 @@ public class Modelo implements TableModel {
         int posicionBuscada = -1;
         for (int i = 0; i < listaPedidos.size(); i++) {
             Pedido pedido = listaPedidos.get(i);
-            if (pedido.getNumeroPedido() == numeroPedido) {
+            if (pedido.getId() == numeroPedido) {
                 posicionBuscada = i;
             }
         }
